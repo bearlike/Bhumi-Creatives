@@ -1,0 +1,346 @@
+/*
+ * textbox.css V1.0.0
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2014, Daxeel Soni
+ * https://www.github.com/daxeel
+ *
+ */
+
+/*static rextbox startss*/
+.textbox{
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+    background: url(male.png) no-repeat;
+    background-position: 5px 5px;
+    padding: 10px 10px 10px 45px;
+    border: 1px solid #999;
+    width: 165px;
+    transition:All 0.2s linear;
+	-webkit-transition:All 0.2s linear;
+	-moz-transition:All 0.2s linear;
+	-o-transition:All 0.2s linear;
+}
+.textbox:focus {
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+/*static rextbox Ends*/
+
+/*Movable textbox starts*/
+.textbox2 {
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    border: 1px solid #999;
+    height: 15px;
+    transition:All 0.2s linear;
+	-webkit-transition:All 0.2s linear;
+	-moz-transition:All 0.2s linear;
+	-o-transition:All 0.2s linear;
+}
+.textbox2:focus {
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+/*Movable textbox ends*/
+
+/*textbox3 starts*/
+.textbox3 {
+	background-color: #f8f008;
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: none;
+}
+.textbox3:focus {
+	border-bottom:1px solid red;
+}
+/*textbox3 ends*/
+
+/*textbox4 starts*/
+.textbox4 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: none;
+}
+.textbox4:focus {
+	background-color: #fff;
+	border-bottom:1px solid #daa520;
+}
+/*textbox4 ends*/
+
+/*textbox5 starts*/
+.textbox5 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid black;
+    transition:All 0.2s linear;
+	-webkit-transition:All 0.2s linear;
+	-moz-transition:All 0.2s linear;
+	-o-transition:All 0.2s linear;
+}
+.textbox5:focus {
+	transform: translate(10px, 0px);
+-webkit-transform: translate(10px, 0px);
+-moz-transform: translate(32px, 0px);
+-o-transform: translate(32px, 0px);
+-ms-transform: translate(32px, 0px);
+}
+/*textbox5 ends*/
+
+/*textbox6 start6*/
+.textbox6 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid black;
+    transition:All 0.7915s ease;
+    -webkit-transition:All 0.7915s ease;
+    -moz-transition:All 0.7915s ease;
+    -o-transition:All 0.7915s ease;
+    transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
+
+}
+.textbox6:focus {
+    transform: rotate(0deg) scale(1.2) skew(0deg) translate(15px);
+    -webkit-transform: rotate(0deg) scale(1.2) skew(0deg) translate(15px);
+    -moz-transform: rotate(0deg) scale(1.2) skew(0deg) translate(5px);
+    -o-transform: rotate(0deg) scale(1.2) skew(0deg) translate(5px);
+    -ms-transform: rotate(0deg) scale(1.2) skew(0deg) translate(5px);
+}
+/*textbox6 ends*/
+
+/*textbox7 starts*/
+.textbox7 {
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    border: 1px solid #999;
+    border-radius: 30px;
+    height: 15px;
+    transition:All 0.1s linear;
+	-webkit-transition:All 0.1s linear;
+	-moz-transition:All 0.2s linear;
+	-o-transition:All 0.2s linear;
+}
+.textbox7:focus {
+	background-color: #2c3342;
+	color: #fff;
+}
+/*textbox7 ends*/
+
+/*textbox8 starts*/
+.textbox8 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid black;
+}
+.textbox8:focus {
+    background-color: #0067e7;
+    color: #fff;
+}
+.textbox8:hover {
+    background-color: #008080;
+    color: #fff;
+}
+/*textbox8 ends*/
+
+/*textbox9 starts*/
+.textbox9 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid #6a9c53;
+}
+.textbox9:focus {
+    border: 1px dashed #6a9c53;
+}
+/*textbox9 ends*/
+
+/*textbox10 starts*/
+.textbox10{
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid #000000;
+    width: 200px;
+    transition:All 0.2s linear;
+	-webkit-transition:All 0.2s linear;
+	-moz-transition:All 0.2s linear;
+	-o-transition:All 0.2s linear;
+}
+.textbox10:focus {
+	background: url(search.png) no-repeat;
+	background-position: 300px 5px;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+/*textbox10 ends*/
+
+/*textbox11 starts*/
+.textbox11 {
+	outline: none;
+	background-color: #EEEEEE;
+	color: #000000;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: none;
+}
+.textbox11:focus {
+	border-left:1px solid #0067e7;
+	border-right:1px solid #0067e7;
+}
+/*textbox11 ends*/
+
+/*textbox12 starts*/
+.textbox12 {
+-webkit-animation: cssAnimation 1.4101s 16 ease-in-out;
+-moz-animation: cssAnimation 1.4101s 16 ease-in-out;
+-o-animation: cssAnimation 1.4101s 16 ease-in-out;
+outline: none;
+	color: #000000;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border:1px solid #008080;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(0deg) scale(0.804) skew(1deg) translate(0px); }
+to { -webkit-transform: rotate(0deg) scale(0.991) skew(1deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(0deg) scale(0.804) skew(1deg) translate(0px); }
+to { -moz-transform: rotate(0deg) scale(0.991) skew(1deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(0deg) scale(0.804) skew(1deg) translate(0px); }
+to { -o-transform: rotate(0deg) scale(0.991) skew(1deg) translate(0px); }
+}
+/*textbox12 ends*/
+
+/*textbox13 starts*/
+.textbox13 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: none;
+    background: #fff;
+}
+.textbox13:hover {
+	border-top: 3px #008080 solid;
+}
+.textbox13:focus {
+	border-bottom:3px solid #008080;
+}
+/*textbox13 ends*/
+
+/*textbox14 starts*/
+.textbox14 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid black;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+.textbox14:focus{
+    transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+    -webkit-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+    -moz-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+    -o-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+    -ms-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+}
+/*textbox14 ends*/
+
+/*textbox15 starts*/
+.textbox15 {
+	outline: none;
+	color: grey;
+	font-size: 15px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	padding: 10px 10px 10px 10px;
+	width:200px;
+    height: 15px;
+    border: 1px solid black;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+.textbox15:focus{
+	border: 2px dashed #ff0000;
+    transform: scale(1.458, 1.466);
+-webkit-transform: scale(1.458, 1.466);
+-moz-transform: scale(1.458, 1.466);
+-o-transform: scale(1.458, 1.466);
+-ms-transform: scale(1.458, 1.466);
+}
+/*textbox15 ends*/
