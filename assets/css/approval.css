@@ -1,0 +1,15 @@
+.projectImg{
+	height: 250px;
+	width: 250px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#imager{
+    width:800px;
+    height:800px;
+}
+
+.but{
+    text-decoration: none;
+}
