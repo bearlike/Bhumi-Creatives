@@ -6,7 +6,7 @@
 	<!-- Head Open -->
 	<head>
 		<!-- Page Title Open-->
-		<title>User | Login</title>
+		<title>Moderator | Login</title>
 		<!-- Page Title Close-->
 		<!-- Site Icon Open-->
 		<link rel="icon" type="image/png" href="assets/img/siteicon.png">
@@ -15,7 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/unite.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
 		<!-- Fonts Here -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -27,26 +26,31 @@
 		<div class="my-login-page">
 		<!-- PHP Open -->
 		<?php
+		/* For Logging the moderator in using User Name and Password Provided*/
 			if (isset($_POST['submit'])) {
+				/*Server mysqldb Address*/
 		    $servername = "localhost";
-		    $username = "root";
+				/*Username of the mysqldb server*/
+				$username = "root";
+				/*Password of the mysqldb server*/
 		    $password = "";
+				/*Name of the Database*/
 		    $dbname = "uplabs";
-		    // Create connection
+		    /*Create connection*/
 		    session_start();
 		    $conn = new mysqli($servername, $username, $password, $dbname);
-		    // Check connection
+		    /*Check connection*/
 		    if ($conn->connect_error) {
 		        die("Connection failed: " . $conn->connect_error);
 		    }
-		    //echo "Connected successfully";
-		    session_start();
+		    /*echo "Connected successfully";
+		    session_start();*/
 		    $sql = "SELECT * FROM admin";
 		    $result = $conn->query($sql);
 		    $user = $_POST["user"];
 		    $pass = $_POST["pass"];
 		    if ($result->num_rows > 0) {
-		        // output data of each row
+		        /*output data of each row*/
 		        $found = FALSE;
 		        while ($row = $result->fetch_assoc()) {
 		            if ($user == $row["uname"]) {
@@ -84,6 +88,7 @@
 										<div class="form-group">
 											<input class="form-control" type="text" name="user" placeholder="Enter Email" required><br>
 											<input class="form-control" type="Password" name="pass" placeholder="Enter Password" required><br>
+											<!-- Submit Credentials as POST-->
 											<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">
 										</div>
 										<center>
