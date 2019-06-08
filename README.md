@@ -1,4 +1,4 @@
-# Donation Platform for Bhumi NGO
+# Bhumi Creatives
 ![Status](https://img.shields.io/website/https/about-blank.svg)
 ![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
 
