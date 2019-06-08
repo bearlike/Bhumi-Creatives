@@ -15,7 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/unite.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
 		<!-- Fonts Here -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -27,6 +26,7 @@
 		<div class="my-login-page">
 		<!-- PHP Open -->
 		<?php
+		/* For Logging the User in using User Name and Password Provided*/
 			if (isset($_POST['submit'])) {
 	    $servername = "localhost";
 	    $username = "root";
@@ -86,7 +86,7 @@
 										<div class="form-group">
 											<input type="text" class="form-control" name="user" placeholder="Enter Email" required><br>
 											<input type="Password" class="form-control" name="pass" placeholder="Enter Password" required><br>
-											<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit" class="button">
+											<!-- Submit Credentials as POST-->											<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit" class="button">
 										</div>
 										<center>
 											<a href="public/forgetpass.php">Forgot Password?</a>
