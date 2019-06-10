@@ -1,4 +1,4 @@
-<link rel="icon" type="image/ico" href="images/logo.png" />
+<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 <header id="luxbar" class="luxbar-fixed">
     <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
