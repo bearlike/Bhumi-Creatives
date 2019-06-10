@@ -48,7 +48,7 @@
 						            $found = TRUE;
 
 						            $salted = '24@fu'.$pass.'45&deo';
-									$hashed = hash('sha512', $salted);
+												$hashed = hash('sha512', $salted);
 
 						        	if($hashed == $row["password"])
 						        	{
@@ -67,7 +67,7 @@
 						        	}
 						        	else
 						        	{
-						        		echo \n<center><h3>Incorrect password</h3></center>";
+						        		echo "\n<center><h3>Incorrect password</h3></center>";
 						        	}
 						        }
 						    }
