@@ -30,12 +30,14 @@
 			$url = $row['image'];
 			$title = $row['title'];
 			$doneby = $row['uname'];
+            $desc = $row['descri'];
 			$tags = $row['tags'];
 		}
 
 		echo "<div class='w3-cell-row' style='width:100%;padding:20px;'><div class='w3-container w3-cell w3-mobile w3-col m6 l6 w3-image'><img src='".$url."' class='disImg' alt='Not Able to Display' /></div>";
 
-		echo "<div class=' w3-container w3-cell w3-mobile w3-cell-middle w3-col m6 l6'><center><h2>".$title."</h2>by ".$doneby."<br><br><br><b>Tags</b> : ".$tags."<br><br><br>".$row['downloads']." Downloads<br><br>";
+		echo "<div class=' w3-container w3-cell w3-mobile w3-cell-middle w3-col m6 l6'><center><h2>".$title."</h2>by ".$doneby."<br><br><br>
+        <b>About:</b>".$desc."<br><br><b>Tags</b> : ".$tags."<br><br><br>".$row['downloads']." Downloads<br><br>";
         
         $q1="select count(uname) from likes where pid='".$row['pid']."';";
         $rs1=$conn->query($q1);
