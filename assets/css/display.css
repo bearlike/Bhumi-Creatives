@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body, h1, h2, h3, h4 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.grey {
+  background: #f4f6f9;
+}
+
+.rounded {
+  border-radius: 2em;
+}
+.delete-button {
+   border: 0;
+   background: none;
+}
