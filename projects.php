@@ -2,14 +2,23 @@
 <html>
 <head>
 	<title>Projects | Bhumi</title>
- 	
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
 	<link rel="stylesheet" type="text/css" href="lib/buttons/gradient.css">
+	<link rel="stylesheet" type="text/css" href="lib/textbox-css/textbox.css">
+	<link rel="stylesheet" type="text/css" href="lib/buttons/material-circle.css">
+	<link rel="stylesheet" type="text/css" href="styles/projects.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/display.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="lib/buttons/gradient.css">
+	<link rel="stylesheet" type="text/css" href="lib/font-awesome/4.7.0/css/font-awesome.css">
+
 </head>
 
 <body>
-	<br><br><br><!-- Too Lazy for Padding -->
+	<!-- Too Lazy for Padding -->
 	<?php
 		include 'header.php';
 		include 'connection.php';
@@ -27,7 +36,7 @@
 			while($row = $result->fetch_assoc()){
 				$title = $row["title"];
 				$url = $row["image"];
-				echo "<div class='w3-btn w3-col m4 l3'><div class='w3-display-container'><a onclick='redir()'><img name='".$title."' class='projectImg w3-hover-opacity' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><div class='w3-display-topright w3-padding'>";
+				echo "<div class='w3-btn w3-col m4 l3'><div class='w3-display-container'><a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><div class='w3-display-topright w3-padding'>";
                 $q1 = "SELECT * FROM likes WHERE pid='".$row['pid']."' AND uname='".$user."';";
                 $rs1 = $conn->query($q1);
                 $q2 = "SELECT count(uname) FROM likes WHERE pid='".$row['pid']."';";
@@ -38,7 +47,7 @@
                 else
 				    echo "<button class='unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
 
-				echo "<center><b>".$title."<br>Tags </b>: ".$row['tags']."</center></a></div>";
+				echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 			}
 		}
 		else{

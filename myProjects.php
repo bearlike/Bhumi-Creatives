@@ -44,7 +44,7 @@
 				$url = $row["image"];
 				echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".$title."' class='projectImg' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><br>";
 				
-				echo "<center><b>".$title."<br>Tags </b>: ".$row['tags']."</center></a></div>";
+				echo "<center><b>".$title."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 			}
 		}
 		else{
@@ -62,7 +62,7 @@
 				$url = $row["image"];
 				echo "<div class='w3-btn w3-col m4 l3'><a><img name='".$title."' class='projectImgApp' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><br>";
 				
-				echo "<center><b>".$title."<br>Tags </b>: ".$row['tags']."</center></a></div>";
+				echo "<center><b>".$title."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 			}
 		}
 		else{

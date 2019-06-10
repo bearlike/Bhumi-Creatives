@@ -42,7 +42,7 @@
                     {
                         echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".$title."' class='projectImg w3-hover-opacity' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><br>";
 
-						echo "<center><b>".$title."<br>Tags </b>: ".$row['tags']."<br>";
+						echo "<center><b>".$title."<br>Tags:</b> ".$row['tags']."<br>";
 						echo "<form method='post' action='delete.php?pid=".$row['pid']."'><input class='w3-button w3-blue w3-round-large' type='submit' name='delete' value='Delete'></form></center></a></div>";
 
                         $flag = 1;

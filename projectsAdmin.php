@@ -17,12 +17,11 @@
 
 <!-- Body Opens -->
 <body class="grey">
-	<br><br><br><!-- Too Lazy for Padding -->
 	<!-- PHP Open -->
 	<?php
 		include 'headerAdmin.php';
 		include 'connection.php';
-		
+
 		session_start();
 
 		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")

@@ -1,6 +1,6 @@
 .likebt{
     border-radius: 8px;
-    background-color: blue;
+    background-color: #da6635;
     color: white;
     padding-bottom: 4px;
 }
@@ -11,7 +11,7 @@
 }
 
 .unlikebt:hover{
-    background-color: blue;
+    background-color: #da6635;
     color: white;
 }
 
