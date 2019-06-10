@@ -3,6 +3,7 @@
 <head>
 	<title>Forgot Password</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/ico" href="images/logo.png" />
 	</head>
 <body>
 
@@ -10,23 +11,12 @@
 		use PHPMailer\PHPMailer\PHPMailer;
 		use PHPMailer\PHPMailer\Exception;
 
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		include 'connection.php';
 
 		session_start();
 
 		if (isset($_POST['subEmail'])) {			
-			$email = $_POST['emailID'];
+			$email = mysqli_real_escape_string($conn, $_POST['emailID']);
 
 			$uni_id = rand(10,99);
 
@@ -54,33 +44,42 @@
 				$mail = new PHPMailer(true); 
 
 				try {
-					$senderMail = "";			//add the sender mail
-					$senderPass = "";			//add the sender password
-					//$mail->SMTPDebug = 4;
-				    //Server settings
-				    $mail->isSMTP();                                            // Set mailer to use SMTP
-				    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-				    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-				    $mail->Username   = $senderMail;                     // SMTP username
-					$mail->Password   = $senderPass;                               // SMTP password
-				    //$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
-				    $mail->Port       = 587;                                    // TCP port to connect to
+					$sql2 = "SELECT * FROM smtp;";
+					$res2 = $conn->query($sql2);
 
-				    //Recipients
-				    $mail->setFrom($senderMail, 'Uplabs');
-					$mail->addAddress($email);     // Add a recipient
-					$mail->addReplyTo($senderMail);
+					if($row2 = $res2->fetch_assoc())
+					{
 
-				    // Content
-				    $mail->isHTML(true);                                  // Set email format to HTML
-				    $mail->Subject = 'Reset Password';
-				    $mail->Body    = 'This mail is regarding the reset password you requested a while ago.<br>Enter the otp '.$otp.' in the browser window and then reset your Password.';
-				    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+						$senderMail = $row2['mail'];			//add the sender mail
+						$senderPass = $row2['password'];			//add the sender password
 
-				    $mail->send();
-				    
-				    header('location:resetOtp.php');
-				    exit();
+						//$mail->SMTPDebug = 4;
+						//Server settings
+						$mail->isSMTP();                                            // Set mailer to use SMTP
+						$mail->Host       = $row2['host'];  // Specify main and backup SMTP servers
+						$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+						$mail->Username   = $senderMail;                     // SMTP username
+						$mail->Password   = $senderPass;                               // SMTP password
+						//$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
+						$mail->Port       = $row2['port'];                                    // TCP port to connect to
+
+						//Recipients
+						$mail->setFrom($senderMail, 'Creatives');
+						$mail->addAddress($email);     // Add a recipient
+						$mail->addReplyTo($senderMail);
+
+					    // Content
+					    $mail->isHTML(true);                                  // Set email format to HTML
+					    $mail->Subject = 'Reset Password';
+					    $message    = 'This mail is regarding the reset password you requested a while ago.<br>Enter the otp '.$otp.' in the browser window and then reset your Password.';
+					    $mail->Body = wordwrap($message, 70);
+					    $mail->AltBody = 'This mail is regarding the reset password you requested a while ago.Enter the otp '.$otp.' in the browser window and then reset your Password.';
+
+					    $mail->send();
+					    
+					    header('location:resetOtp.php');
+					    exit();
+					}
 				} catch (Exception $e) {
 				    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 				}
@@ -89,12 +88,13 @@
 				echo "<center><h3>This E-Mail Address does not exist. Try Signing Up!!</h3></center>";
 			}
 		}
+		$conn->close();
 
 	?>
 
 	<form action="forgetPass.php" method="post" class="log">
 		<h2>E-Mail ID</h2><br>
-		Enter your E-Mail ID : <input type="email" name="emailID" required/><br><br>
+		Enter your E-Mail ID : <input type="email" name="emailID" placeholder="Enter E-Mail" required/><br><br>
 		<input type="submit" name="subEmail" value="Submit E-Mail" class="button" />
 	</form>
 
