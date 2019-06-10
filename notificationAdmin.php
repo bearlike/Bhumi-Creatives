@@ -9,36 +9,23 @@
 
 </head>
 <body>
-	<ul>
-  		<li><a href="projectsAdmin.php">Home</a></li>
-  		<li><a href="approval.php">Requets</a></li>
-  		<li style="float:right"><a href="logout.php">LogOut</a></li>
- 		<li style="float:right"><a class="active" href="notificationAdmin.php">All Notifications</a></li>
-	</ul>
-
 
 	<?php
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
+		include 'headerAdmin.php';
+		include 'connection.php';
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		session_start();
 
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
+			$user = $_SESSION['user'];
+		else
+			header("Location:loginAdmin.php");
 
 		if( isset($_GET['clear']) )
 		{
 			$sql = "DELETE FROM notification WHERE status='read';";
 			$result = $conn->query($sql);
 		}
-
-		session_start();
-		$user = $_SESSION['user'];
 
 		$sql = "SELECT * FROM notification;";
 		$result = $conn->query($sql) or die($conn->error);
@@ -57,6 +44,7 @@
 		else{
 			echo "<h3>No Unread Notifications to Display.</h3>";
 		}
+		$conn->close();
 	?>
 
 	<script type="text/javascript">
