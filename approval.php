@@ -9,27 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-	<ul>
-  		<li><a href="projectsAdmin.php">Home</a></li>
-  		<li><a class="active" href="approval.php">Requets</a></li>
-  		<li style="float:right"><a href="logout.php">LogOut</a></li>
-  		<li style="float:right"><a href="notificationAdmin.php">All Notifications</a></li>
-	</ul>
-
 
 	<?php
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
+		include 'headerAdmin.php';
+		include 'connection.php';
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		session_start();
 
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
+			$user = $_SESSION['user'];
+		else
+			header("Location:loginAdmin.php");
 
 		$sql = "SELECT * FROM approval;";
 		$result = $conn->query($sql);
@@ -52,6 +42,7 @@
 		else{
 			echo "<h3>No Projects to Display.</h3>";
 		}
+		$conn->close();
 	?>
 
 	

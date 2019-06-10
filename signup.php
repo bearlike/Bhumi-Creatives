@@ -134,7 +134,7 @@
 									    $message = "This mail is regarding the account verification you created at the Uplabs.<br>Click the link below to verify your account.<br><br>Click <a href='localhost/creatives/verify.php?uid=".$uid."'>here</a>.<br><br><br>If this request was not made by you click <a href='localhost/creatives/unverify.php?uid=".$uid."'>here</a>.";
 									    $mail->Body = wordwrap($message, 70);
 									    $mail->AltBody = "This mail is regarding the account verification you created at the Uplabs.Click the link below to verify your account.\nClick localhost/creatives/verify.php?uid=".$uid." .\n\nIf this request was not made by you click localhost/creatives/unverify.php?uid=".$uid." .";
-
+											
 									    $mail->send();
 									}
 
@@ -175,7 +175,7 @@
 				<input type="password" class="form-control" name="pass" placeholder="Enter Password" required><br>
 				<input type="Password" class="form-control" name="conpass" placeholder="Confirm Password" required><br>
 				<input type="submit"class="btn btn-primary btn-block" name="submit" value="SignUp" class="button">
-			</div>
+			</div>    
 				<br>Already have an account? <a href="index.php">Log in</a>
 		</form>
 </div></div></div></div></div></div>

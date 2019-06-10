@@ -1,16 +1,5 @@
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "uplabs";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
+	include 'connection.php';
 
 	session_start();
 
@@ -42,8 +31,11 @@
 		readfile($url);
 	}
 	
-	if( $_SESSION['user'] != 'admin'){
+	if( $_SESSION['user'] != 'admin')
+	{
 		$sql = "UPDATE project SET downloads=downloads+1 WHERE pid='".$pid."'";
 		$result = $conn->query($sql);
 	}
+	
+	$conn->close();
 ?>
