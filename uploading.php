@@ -124,7 +124,7 @@
                     $tags = $_POST['tag'].",".$_POST['city'].",".$_POST['cause'];
 
                     $sql = "INSERT INTO approval VALUES('".$user."','".$pid."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."');";
-                    $result = $conn->query($sql);
+                    $result = $conn->query($sql) or die(mysqli_error($conn));
 
                     $_SESSION['msg']="Your file has been successfully uploaded.";
                     header('location:myProjects.php');

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-<br><br><br><br>
+
 	<?php
 		include 'headerAdmin.php';
 		include 'connection.php';
