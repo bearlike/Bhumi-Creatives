@@ -9,30 +9,16 @@
 	
 </head>
 <body>
-	<ul id="top">
-      <li class="topnav"><a href="projects.php">Home</a></li>
-      <li class="topnav"><a href="myProjects.php">My Projects</a></li>
-    
-    <li class="topnav"><a href="uploading.php">Upload</a></li>
-      <li  class="topnav" style="float:right"><a href="logout.php">LogOut</a></li>
-      <li class="topnav" style="float:right"><a href="notification.php">Notification</a></li>
-  </ul>
-
 	<?php
+		include 'header.php';
+		include 'connection.php';
+
 		session_start();
 
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		if(isset($_SESSION['user']))
+			$user = $_SESSION['user'];
+		else
+			header("Location:index.php");
 
 		$user = $_SESSION['user'];
 		$pid = $_GET['pid'];
@@ -62,6 +48,8 @@
     
 		echo "<form action='download.php?pid=".$pid."&type=i' method='post'><button class='button'>Download Now</button></form><br>";
         echo "<form action='download.php?pid=".$pid."&type=s' method='post'><button class='button'>Download Source File</button></form></center></div></div>";
+
+        $conn->close();
 
 		?>
 

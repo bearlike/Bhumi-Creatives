@@ -9,30 +9,18 @@
 	
 </head>
 <body>
-	<ul id='top'>
-  		<li class="topnav"><a href="projectsAdmin.php">Home</a></li>
-  		<li class="topnav"><a href="approval.php">Requets</a></li>
-  		<li class="topnav" style="float:right"><a href="logout.php">LogOut</a></li>
-  		<li style="float:right"><a href="notificationAdmin.php">All Notifications</a></li>
-	</ul>
 
 	<?php
+		include 'headerAdmin.php';
+		include 'connection.php';
+
 		session_start();
 
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
+		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
+			$user = $_SESSION['user'];
+		else
+			header("Location:loginAdmin.php");
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
-
-		$user = $_SESSION['user'];
 		$pid = $_GET['pid'];
 
 		$sql = "SELECT * FROM project WHERE pid='".$pid."';";
@@ -54,6 +42,7 @@
 		echo "<form action='download.php?pid=".$pid."&type=i' method='post'><input type='submit' class='button' value='Download Now'/></form><br>";
         echo "<form action='download.php?pid=".$pid."&type=s' method='post'><button class='button'>Download Source File</button></form></center></div></div>";
 
+        $conn->close();
 		?>
 
 </body>
