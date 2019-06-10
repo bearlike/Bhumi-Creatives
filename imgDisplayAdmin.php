@@ -36,7 +36,7 @@
 
 		echo "<div class='w3-cell-row' style='width:100%;padding:20px;'><div class='w3-container w3-cell w3-mobile w3-col m6 l6 w3-image'><img src='".$url."' class='disImg' alt='Not Able to Display' /></div>";
 
-		echo "<div class=' w3-container w3-cell w3-mobile w3-cell-middle w3-col m6 l6'><center><h2>".$title."</h2>by ".$doneby."<br><br><br><b>About:</b>".$desc."<br><br><b>Tags</b> : ".$tags."<br><br><br>".$row['downloads']." Downloads<br><br><br>";
+		echo "<div class=' w3-container w3-cell w3-mobile w3-cell-middle w3-col m6 l6'><center><h2>".$title."</h2>by ".$doneby."<br><br><br><b>Description :</b>".$desc."<br><br><b>Tags</b> : ".$tags."<br><br><br>".$row['downloads']." Downloads<br><br><br>";
 
 		echo "<form action='download.php?pid=".$pid."&type=i' method='post'><input type='submit' class='button' value='Download Now'/></form><br>";
         echo "<form action='download.php?pid=".$pid."&type=s' method='post'><button class='button'>Download Source File</button></form></center></div></div>";
