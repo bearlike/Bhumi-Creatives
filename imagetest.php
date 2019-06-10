@@ -1,4 +1,5 @@
 <?php
+  include 'header.php';
   include 'connection.php';
 
   session_start();
@@ -20,6 +21,7 @@
     $url = $row['image'];
     $title = $row['title'];
     $doneby = $row['uname'];
+    $desc = $row['descri'];
     $tags = $row['tags'];
   }
 
