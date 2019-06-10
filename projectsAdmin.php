@@ -14,55 +14,22 @@
 	<link rel="stylesheet" type="text/css" href="lib/buttons/gradient.css">
 	<link rel="stylesheet" type="text/css" href="lib/font-awesome/4.7.0/css/font-awesome.css">
 </head>
-<!-- Navigation Bar Open -->
-<header id="luxbar" class="luxbar-fixed">
-  <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
-  <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
-    <ul class="luxbar-navigation">
-      <li class="luxbar-header">
-        <a href="#" class="luxbar-brand"><img src="assets/img/logo.png" style="width: 40%; height: 40%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
-          <span></span>
-        </label>
-      </li>
-      <li class="luxbar-item"><a class="active" href="projectsAdmin.php">Home</a></li>
-      <li class="luxbar-item"><a href="approval.php">Requets</a></li>
-      <li class="luxbar-item">
-			<a>
-				<!-- Search Bar -->
-				<form action='filteredAdmin.php' method='post'>
-					<input type='text' name='filter' class="textbox7" placeholder='Filter by tags' required/>
-      		<input type='submit' value="$" class="bttn-material-circle bttn-xs icon-circle-arrow-right icon-large fa-search"/>
- 				</form>
-			  </a>
-			</li>
-			<li class="luxbar-item"><a href="notificationAdmin.php">Notifications</a></li>
-      <li class="luxbar-item"><a href="logout.php">Sign Out</a></li>
-    </ul>
-  </div>
-</header>
-<!-- Navigation Bar Close -->
+
 <!-- Body Opens -->
 <body class="grey">
 	<br><br><br><!-- Too Lazy for Padding -->
 	<!-- PHP Open -->
 	<?php
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		include 'headerAdmin.php';
+		include 'connection.php';
+		
 		session_start();
-		if(isset($_SESSION['user']))
-    		$user = $_SESSION['user'];
-  		else
-    		header("Location:index.php");
+
+		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
+			$user = $_SESSION['user'];
+		else
+			header("Location:loginAdmin.php");
+
 		$sql = "SELECT * FROM project;";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0){

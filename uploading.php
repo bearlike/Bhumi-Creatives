@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Upload</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
@@ -123,8 +121,9 @@
             {
                 if (move_uploaded_file($_FILES["source"]["tmp_name"], $target_file))
                 {
+                    $tags = $_POST['tags'].",".$_POST['city'].",".$_POST['cause'];
 
-                    $sql = "INSERT INTO approval VALUES('".$user."','".$pid."','".$_POST['name']."','".$target_file_img."','".$_POST['city']."','".$_POST['tag']."','".$target_file."');";
+                    $sql = "INSERT INTO approval VALUES('".$user."','".$pid."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."');";
                     $result = $conn->query($sql);
 
                     $_SESSION['msg']="Your file has been successfully uploaded.";
@@ -156,15 +155,22 @@
             <label>Design Name</label>
             <input class="w3-input" type="text" name='name' required />
         </p>
-        
+
         <p>
-            <label>Project Name</label>
-            <input class="w3-input" type="text" name='project' required />
+            <label>Description</label>
+            <input class="w3-input" type="text" name='descri' maxlength="250" required />
+            (Maximum 250 Characters allowed)
         </p>
   
         <p>
             <label>City</label>
             <input class="w3-input" type="text" name='city' required />
+        </p>
+
+        <p>
+            <label>Cause</label>
+            <input class="w3-input" type="text" name='cause' required />
+            (Eg - RTE)
         </p>
 
         <p>

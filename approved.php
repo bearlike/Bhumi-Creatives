@@ -2,9 +2,7 @@
 <html>
 <head>
 	<title>Approvals</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
+
     <link rel="stylesheet" href="styles/approval.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
@@ -49,7 +47,7 @@
             $query2="INSERT INTO notification VALUES('".$row2['user']."','".$row2['title']." has been approved',CURDATE(),'unread');";
             $conn->query($query2);
             
-            $query4="INSERT INTO project VALUES('".$pid."','".$row2['user']."','".$row2['title']."','".$row2['image']."','".$row2['city']."','".$row2['tags']."','".$row2['source_file']."',0) ;";
+            $query4="INSERT INTO project VALUES('".$pid."','".$row2['user']."','".$row2['title']."','".$row2['image']."','".$row2['descri']."','".$row2['city']."','".$row2['tags']."','".$row2['cause']."','".$row2['source_file']."',0) ;";
             $conn->query($query4);
 
             $query5="DELETE FROM approval WHERE pid='".$pid."';";
