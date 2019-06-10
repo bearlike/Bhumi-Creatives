@@ -1,19 +1,25 @@
 <html>
 	<head>
-		<title>Sign Up</title>
-
-		<link rel="stylesheet" type="text/css" href="styles/login.css">
-		<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		<link rel="icon" type="image/ico" href="images/logo.png" />
+		<!-- Page Title Open-->
+		<title>User | Login</title>
+		<!-- Page Title Close-->
+		<!-- Site Icon Open-->
+		<link rel="icon" type="image/png" href="assets/img/siteicon.png">
+		<!-- Site Icon Close-->
+		<!-- CSS Stylesheets Here -->
+		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+		<!-- Fonts Here -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	</head>
-
+		<!-- Head Close -->
+		<!-- Body Open -->
 	<body>
-		
-		<div>
-		    <center>
-		        <h1 class='loginName'>Welcome to Creatives</h1>
-		    </center>
-		</div>
+		<div class="my-login-page">
+		<!-- PHP Open -->
 		<?php
 			
 			if(isset($_POST['submit']))
@@ -95,19 +101,27 @@
 			}
 		?>
 
-		 
-		<form class="log"  action="signup.php" method="POST">
-			 <h2 class="login">SIGN UP</h2>
-		<center> <table><tr>
-			<td>Username :</td><td> <input type="text" name="user" placeholder="Enter Username" required></td></tr>
-			<tr><td>Email : </td><td><input type="text" name="email" placeholder="Enter email" required></td></tr>
-			<tr><td>Password :</td><td> <input type="password" name="pass" placeholder="Enter password" required></td></tr>
-			<tr><td>Conform Password :</td><td> <input type="Password" name="conpass" placeholder="conform password" required></td></tr></table><br><br>
-			<input type="submit" name="submit" value="SignUp" class="button">
-        </center>
-			<br><br>Already have an account? <a href="index.php">LogIn</a>
-			
+		<section class="h-100">
+			<div class="container h-100">
+				<div class="row justify-content-md-center h-100">
+					<div class="card-wrapper">
+						<div class="brand">
+							<img src="assets/img/logo.jpg" alt="Bhumi logo">
+						</div>
+						<div class="card fat">
+							<div class="card-body">
+		<form action="signup.php" method="POST">
+			 <h4 class="clard-title">Register</h4>
+			 <br>
+			 <div class="form-group">
+				<input type="text" class="form-control" name="user" placeholder="Enter Username" required><br>
+				<input type="text" class="form-control" name="email" placeholder="Enter Email" required><br>
+				<input type="password" class="form-control" name="pass" placeholder="Enter Password" required><br>
+				<input type="Password" class="form-control" name="conpass" placeholder="Confirm Password" required><br>
+				<input type="submit"class="btn btn-primary btn-block" name="submit" value="SignUp" class="button">
+			</div>    
+				<br>Already have an account? <a href="index.php">Log in</a>
 		</form>
-          	
+</div></div></div></div></div></div>
 	</body>
 </html>
