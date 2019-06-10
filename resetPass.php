@@ -28,7 +28,7 @@
 			{
 				$salted = '24@fu'.$pass.'45&deo';
 				$hashed = hash('sha512', $salted);
-				
+
 				$sql = "UPDATE ulogin SET password='".$hashed."' WHERE uname='".$user."';";
 				$result = $conn->query($sql);
 
@@ -40,17 +40,25 @@
 			}
 			$conn->close();
 		}
-
-	?>
-
-	<center>
-		<form method="post" action="resetPass.php" class="log">
-			<h3>RESET PASSWORD</h3>
-			<br>New Password : <input type="password" name="pass" placeholder="Enter Password" required/><br><br>
-			Confirm New Password : <input type="password" name="conPass" placeholder="Enter Confirm Password" required/><br><br>
-			<input type="submit" name="subPass" value="Change Password" class="button" />
-		</form>
-	</center>
-
+		?>
+	<!-- PHP Close -->
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="assets/img/logo.jpg" alt="Bhumi logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<form method="post" action="resetPass.php">
+								<h4 class="card-title">Reset Password</h4>
+								<div class="form-group">
+									<input type="password" name="pass" class="form-control" placeholder="Enter New Password" required/><br>
+									<input type="password" name="conPass" class="form-control" placeholder="Enter New Password Again" required/><br><br>
+									<input type="submit" name="subPass" class="btn btn-primary btn-block" value="Change Password" class="button" />
+								</form>
+							</div>
+						</div>
 </body>
 </html>
