@@ -121,7 +121,7 @@
             {
                 if (move_uploaded_file($_FILES["source"]["tmp_name"], $target_file))
                 {
-                    $tags = $_POST['tags'].",".$_POST['city'].",".$_POST['cause'];
+                    $tags = $_POST['tag'].",".$_POST['city'].",".$_POST['cause'];
 
                     $sql = "INSERT INTO approval VALUES('".$user."','".$pid."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."');";
                     $result = $conn->query($sql);
