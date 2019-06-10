@@ -26,52 +26,64 @@
 		<div class="my-login-page">
 		<!-- PHP Open -->
 		<?php
-		/* For Logging the User in using User Name and Password Provided*/
-			if (isset($_POST['submit'])) {
-	    $servername = "localhost";
-	    $username = "root";
-	    $password = "";
-	    $dbname = "uplabs";
-	    // Create connection
-	    $conn = new mysqli($servername, $username, $password, $dbname);
-	    // Check connection
-	    if ($conn->connect_error) {
-	        die("Connection failed: " . $conn->connect_error);
-	    }
-	    session_start();
-	    $sql = "SELECT * FROM ulogin";
-	    $result = $conn->query($sql);
-	    $user = $_POST["user"];
-	    $pass = $_POST["pass"];
-	    if ($result->num_rows > 0) {
-	        // output data of each row
-	        $found = FALSE;
-	        while ($row = $result->fetch_assoc()) {
-	            if ($user == $row["email"]) {
-	                $found = TRUE;
-	                if ($pass == $row["password"]) {
-	                    if ($row['verified'] != 'yes') {
-	                        echo "\n<center><h3>Verify your account using the mail sent to your E-Mail.</h3></center>";
-	                    } else {
-	                        $_SESSION["user"] = $row["uname"];
-	                        header("Location:projects.php");
-	                        exit();
-	                    }
-	                } else {
-	                    echo "\n<center><h3>Incorrect password</h3></center>";
-	                }
-	            }
-	        }
-	        if ($found == FALSE) {
-	            echo "\n<center><h3>Invalid User. Try again!!</h3></center>";
-	        }
-	    } else {
-	        echo "0 results";
-	    }
-	    $conn->close();
-		}
-		?>
-		<!-- PHP Close -->
+					if(isset($_POST['submit']))
+					{
+						include 'connection.php';
+
+						session_start();
+
+						$sql = "SELECT * FROM ulogin";
+						$result = $conn->query($sql);
+
+						$user = mysqli_real_escape_string($conn, $_POST['user']);
+						$pass = mysqli_real_escape_string($conn, $_POST['pass']);
+
+						if ($result->num_rows > 0)
+						{
+
+						    $found = FALSE;
+						    while($row = $result->fetch_assoc())
+						    {
+						        if($user == $row["email"]) {
+						            $found = TRUE;
+
+						            $salted = '24@fu'.$pass.'45&deo';
+									$hashed = hash('sha512', $salted);
+
+						        	if($hashed == $row["password"])
+						        	{
+
+						        		if($row['verified'] != 'yes')
+						        		{
+						        			echo "\n<center><h3>Verify your account using the mail sent to your E-Mail.</h3></center>";
+						        		}
+						        		else
+						        		{
+		                                	$_SESSION["user"] = $row["uname"];
+						        			header("Location:projects.php");
+						        			exit();
+						        		}
+
+						        	}
+						        	else
+						        	{
+						        		echo "\n<center><h3>Incorrect password</h3></center>";
+						        	}
+						        }
+						    }
+						    if( $found == FALSE )
+						    {
+						    	echo "\n<center><h3>This E-Mail does not exist. Try signing up!!</h3></center>";
+						    }
+
+						}
+						else
+						{
+						    echo "0 results";
+						}
+						$conn->close();
+					}
+				?>		<!-- PHP Close -->
 			<section class="h-100">
 				<div class="container h-100">
 					<div class="row justify-content-md-center h-100">
@@ -89,8 +101,8 @@
 											<!-- Submit Credentials as POST-->											<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit" class="button">
 										</div>
 										<center>
-											<a href="public/forgetpass.php">Forgot Password?</a>
-											<br>Don't have an account? <a href="public/signup.php">SignUp</a>
+											<a href="forgetpass.php">Forgot Password?</a>
+											<br>Don't have an account? <a href="signup.php">SignUp</a>
 										</center>
 									</form>
 								</div>
