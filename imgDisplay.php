@@ -13,8 +13,7 @@
 <?php include "header.php" ?>
 
 <body>
-    </br>
-    </br><br><br>
+
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
@@ -29,11 +28,12 @@
             <div class="cnt_right">
                 <h1 class="prod_title">
                     <?php
-					include "imagetest.php";
-					 echo ucfirst($row["title"]);?>
+            					include "imagetest.php";
+            					 echo ucfirst($row["title"]);
+                    ?>
                 </h1>
                 <p class="prod_sub_title">
-                    <?php echo ucfirst($doneby); ?>
+                    <?php echo ucfirst($doneby);?>
                 </p>
                 <div class="rating-wrapper">
                     <p class="prod_rating"><span class="rating">* * * </span>* *</p>
@@ -44,15 +44,19 @@
                         <?php echo $row["downloads"]; ?>
                         </br>Number of Downloads</h2>
                 </div>
-                <div class="desc_wrapper">
+                <!--<div class="desc_wrapper">
                     <ul class="desc_points">
-                        <li class="desc_point"><?php echo $desc ?></li>
+                        <!--<li class="desc_point"></*?php echo $desc ?*/></li>-->
+                  <!--  </ul>
+                </div>-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et nunc et erat posuere sollicitudin. Etiam vitae dapibus nulla. Sed facilisis arcu et justo consequat, sit amet tempus erat varius. Nulla aliquet est vel felis consequat tempor. Quisque eu ornare nibh. Sed sodales tortor leo, quis dictum est cursus ut. Nulla velit diam, convallis vitae tortor in.</p>
 
-                    </ul>
-                </div>
 
                 <div class="purchase_wrapper">
+                  <center>
                     <div class="buy_btn">Download Now</div>
+                    <div class="buy_btn">Download Source</div>
+                  </center>
                 </div>
             </div>
         </div>
