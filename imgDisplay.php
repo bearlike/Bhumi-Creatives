@@ -10,31 +10,7 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 </head>
 
-<header id="luxbar" class="luxbar-fixed">
-    <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
-    <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
-        <ul class="luxbar-navigation">
-            <li class="luxbar-header">
-                <a href="#" class="luxbar-brand"><img src="assets/img/logo.png" style="width: 40%; height: 40%" alt="Bhumi Logo"></a> <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox">
-					<span></span>
-				</label>
-            </li>
-            <li class="luxbar-item"><a class="active" href="projectsAdmin.php">Home</a></li>
-            <li class="luxbar-item"><a href="approval.php">Request</a></li>
-            <li class="luxbar-item">
-                <a>
-                    <!-- Search Bar -->
-                    <form action='filteredAdmin.php' method='post'>
-                        <input type='text' name='filter' placeholder='Filter by tags' required/>
-                        <input type='submit' value='Filter' />
-                    </form>
-                </a>
-            </li>
-            <li class="luxbar-item"><a href="notificationAdmin.php">Notifications</a></li>
-            <li class="luxbar-item"><a href="logout.php">Sign Out</a></li>
-        </ul>
-    </div>
-</header>
+<?php include "header.php" ?>
 
 <body>
     </br>
@@ -43,7 +19,7 @@
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
                 <div class="main_img img">
-                    <?php    ?>
+                  <img src="uploads\11951.jpg">
                 </div>
                 <div class="prod_thumbs">
 
