@@ -15,9 +15,7 @@
 		    </center>
 		</div>
 		<?php
-			use PHPMailer\PHPMailer\PHPMailer;
-			use PHPMailer\PHPMailer\Exception;
-
+			
 			if(isset($_POST['submit']))
 			{
 				include 'connection.php';
@@ -87,62 +85,8 @@
 						$salted = '24@fu'.$pass.'45&deo';
 						$hashed = hash('sha512', $salted);
 
-   				  		$q3 = "INSERT INTO ulogin VALUES('".$email."','".$hashed."','".$uid."','".$user."','no')";
-   				  		
-   				  		require 'PHPMailer/src/Exception.php';
-						require 'PHPMailer/src/PHPMailer.php';
-						require 'PHPMailer/src/SMTP.php';
-
-						// Instantiation and passing `true` enables exceptions
-						$mail = new PHPMailer(true); 
-
-						try {
-
-							$sql2 = "SELECT * FROM smtp;";
-							$res2 = $conn->query($sql2);
-
-							if($row2 = $res2->fetch_assoc())
-							{
-
-								$senderMail = $row2['mail'];			//add the sender mail
-								$senderPass = $row2['password'];			//add the sender password
-
-								//$mail->SMTPDebug = 4;
-							    //Server settings
-							    $mail->isSMTP();                                            // Set mailer to use SMTP
-							    $mail->Host       = $row2['host'];  // Specify main and backup SMTP servers
-							    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-							    $mail->Username   = $senderMail;                     // SMTP username
-							    $mail->Password   = $senderPass;                               // SMTP password
-							    //$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
-							    $mail->Port       = $row2['port'];                                    // TCP port to connect to
-
-							    //Recipients
-							    $mail->setFrom($senderMail, 'Creatives');
-							    $mail->addAddress($email);     // Add a recipient
-							    $mail->addReplyTo($senderMail);
-
-							    // Content
-							    $mail->isHTML(true);                                  // Set email format to HTML
-							    $mail->Subject = 'Verify your Account';
-							    $message = "This mail is regarding the account verification you created at the Uplabs.<br>Click the link below to verify your account.<br><br>Click <a href='localhost/creatives/verify.php?uid=".$uid."'>here</a>.<br><br><br>If this request was not made by you click <a href='localhost/creatives/unverify.php?uid=".$uid."'>here</a>.";
-							    $mail->Body = wordwrap($message, 70);
-							    $mail->AltBody = "This mail is regarding the account verification you created at the Uplabs.Click the link below to verify your account.\nClick localhost/creatives/verify.php?uid=".$uid." .\n\nIf this request was not made by you click localhost/creatives/unverify.php?uid=".$uid." .";
-
-							    $mail->send();
-							}
-						    
-						} catch (Exception $e) {
-						    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-						}
-
-						if($conn->query($q3))
-   				  		{   
-   				  			$_SESSION["user"] = $user;
-   				  			header("location:index.php");
-   				  			exit();
-   				  		}
-
+   				  		header("location:verificationmail.php?email=".$email."&uid=".$uid."&hash=".$hashed."&user=".$user."");   
+						
    				  	}	
 				}
 
