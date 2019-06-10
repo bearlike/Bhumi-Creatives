@@ -55,7 +55,7 @@
 
 						        		if($row['verified'] != 'yes')
 						        		{
-						        			echo "\n<center><h3>Verify your account using the mail sent to your E-Mail.</h3></center>";
+						        			echo "\n<center><h3><p style='color:#fc0404'>Verify your account using the mail sent to your E-Mail.</p></h3></center>";
 						        		}
 						        		else
 						        		{
@@ -67,13 +67,13 @@
 						        	}
 						        	else
 						        	{
-						        		echo "\n<center><h3>Incorrect password</h3></center>";
+						        		echo "\n<center><h3><p style='color:#fc0404'>Incorrect password</p></h3></center>";
 						        	}
 						        }
 						    }
 						    if( $found == FALSE )
 						    {
-						    	echo "\n<center><h3>This E-Mail does not exist. Try signing up!!</h3></center>";
+						    	echo "\n<center><h3><p style='color:#fc0404'>This Email is not registered. Please register.</p></h3></center>";
 						    }
 
 						}
