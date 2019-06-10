@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
  	<link rel="stylesheet" type="text/css" href="lib/textbox-css/textbox.css">
+	<link rel="stylesheet" type="text/css" href="lib/buttons/material-circle.css">
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
  	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="lib/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 </head>
 <!-- Navigation Bar Open -->
@@ -27,7 +29,7 @@
 				<!-- Search Bar -->
 				<form action='filteredAdmin.php' method='post'>
 					<input type='text' name='filter' class="textbox7" placeholder='Filter by tags' required/>
-      		<input type='submit' value='Filter' />
+      		<input type='submit' value="$" class="bttn-material-circle bttn-xs icon-circle-arrow-right icon-large fa-search"/>
  				</form>
 			  </a>
 			</li>
