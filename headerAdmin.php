@@ -1,4 +1,4 @@
-<link rel="icon" type="image/ico" href="images/logo.png" />
+<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 <ul>
   		<li><a href="projectsAdmin.php">Home</a></li>
   		<li><a href="approval.php">Requets</a></li>
