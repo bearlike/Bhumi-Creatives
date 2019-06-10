@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Projects Admin | Bhumi</title>
-	<link rel="icon" type="image/png" href="assets/img/siteicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
- 	<link rel="stylesheet" type="text/css" href="lib/textbox-css/textbox.css">
-	<link rel="stylesheet" type="text/css" href="lib/buttons/material-circle.css">
+	<title>Projects Admin | Bhumi</title>	
+ 	
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
  	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-	<link rel="stylesheet" type="text/css" href="lib/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+	
 </head>
 
 <!-- Body Opens -->

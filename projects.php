@@ -2,10 +2,7 @@
 <html>
 <head>
 	<title>Projects | Bhumi</title>
-	<link rel="icon" type="image/png" href="assets/img/siteicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+ 	
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
