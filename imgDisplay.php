@@ -20,7 +20,7 @@
 				</label>
             </li>
             <li class="luxbar-item"><a class="active" href="projectsAdmin.php">Home</a></li>
-            <li class="luxbar-item"><a href="approval.php">Requets</a></li>
+            <li class="luxbar-item"><a href="approval.php">Request</a></li>
             <li class="luxbar-item">
                 <a>
                     <!-- Search Bar -->
@@ -70,9 +70,8 @@
                 </div>
                 <div class="desc_wrapper">
                     <ul class="desc_points">
-                        <li class="desc_point">Enriched with ultra-care hydrating formula</li>
-                        <li class="desc_point">Won't fade in extreme heat and humidity</li>
-                        <li class="desc_point">All the kids will think you'r really cool</li>
+                        <li class="desc_point"><?php echo $desc ?></li>
+
                     </ul>
                 </div>
 

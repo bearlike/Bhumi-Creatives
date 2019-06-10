@@ -127,7 +127,7 @@
                     $result = $conn->query($sql);
 
                     $_SESSION['msg']="Your file has been successfully uploaded.";
-                    header('location:myProfile.php');
+                    header('location:myProjects.php');
                     exit();
                 }
                 else
