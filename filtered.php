@@ -7,50 +7,11 @@
   <link rel="stylesheet" href="styles/projects.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<header id="luxbar" class="luxbar-fixed">
-    <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
-    <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
-        <ul class="luxbar-navigation">
-            <li class="luxbar-header">
-                <a href="#" class="luxbar-brand">Bhumi</a>
-                <label class="luxbar-hamburger luxbar-hamburger-doublespin"
-                id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
-            </li>
-            <li class="luxbar-item"><a href="projects.php">Home</a></li>
-            <li class="luxbar-item"><a href="myProjects.php">Projects</a></li>
-            <li class="luxbar-item"><a href="uploading.php">Uploads</a></li>
-            <li class="luxbar-item"><a href="notification.php">Notification </a></li>
-            <li class="luxbar-item"><a href="logout.php">Logout</a></li>
-        </ul>
-    </div>
-</header>
+
 <body>
-	<ul>
-  		<li><a class="active" href="projects.php">Home</a></li>
-  		<li><a href="myProjects.php">My Profile</a></li>
-
- 		<li><a href="uploading.php">Upload</a></li>
- 		<li><a><form action='filtered.php' method='post'><input type='text' name='filter' placeholder='Filter by tags' required/>
-            <input type='submit' value='filter' />
- 		</form></a></li>
-  		<li style="float:right"><a href="logout.php">LogOut</a></li>
-  		<li style="float:right"><a href="notification.php">Notification</a></li>
-	</ul>
-
-
 	<?php
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "uplabs";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
+		include 'header.php';
+        include 'connection.php';
 
         $search = strtolower($_POST['filter']);
         $search = str_replace(" ",",",$search);
