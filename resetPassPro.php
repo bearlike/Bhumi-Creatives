@@ -33,7 +33,7 @@
 				$result = $conn->query($sql);
 
         		$_SESSION['msg'] = "Your Password has been changed successfully.";
-        		header('location:myProfile.php');
+        		header('location:myProjects.php');
         		exit();
 			}
 			else{

@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Approvals</title>
-    
+
     <link rel="stylesheet" href="styles/approval.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-
+<br><br><br><br>
 	<?php
 		include 'headerAdmin.php';
 		include 'connection.php';
@@ -43,6 +43,6 @@
 		$conn->close();
 	?>
 
-	
+
 </body>
 </html>
