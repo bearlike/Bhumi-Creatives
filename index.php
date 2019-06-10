@@ -48,14 +48,14 @@
 						            $found = TRUE;
 
 						            $salted = '24@fu'.$pass.'45&deo';
-												$hashed = hash('sha512', $salted);
+									$hashed = hash('sha512', $salted);
 
 						        	if($hashed == $row["password"])
 						        	{
 
 						        		if($row['verified'] != 'yes')
 						        		{
-						        			echo "\n<center><h3>Verify your account using the mail sent to your E-Mail.</h3></center>";
+						        			echo "\n<center><h3><p style='color:#fc0404'>Verify your account using the mail sent to your E-Mail.</p></h3></center>";
 						        		}
 						        		else
 						        		{
@@ -67,13 +67,13 @@
 						        	}
 						        	else
 						        	{
-						        		echo "\n<center><h3>Incorrect password</h3></center>";
+						        		echo "\n<center><h3><p style='color:#fc0404'>Incorrect password</p></h3></center>";
 						        	}
 						        }
 						    }
 						    if( $found == FALSE )
 						    {
-						    	echo "\n<center><h3>This E-Mail does not exist. Try signing up!!</h3></center>";
+						    	echo "\n<center><h3><p style='color:#fc0404'>This Email is not registered. Please register.</p></h3></center>";
 						    }
 
 						}
@@ -83,8 +83,7 @@
 						}
 						$conn->close();
 					}
-		?>
-		<!-- PHP Close -->
+				?>		<!-- PHP Close -->
 			<section class="h-100">
 				<div class="container h-100">
 					<div class="row justify-content-md-center h-100">
@@ -95,7 +94,7 @@
 							<div class="card fat">
 								<div class="card-body">
 									<form action="index.php" method="POST">
-			 							<h4 class="card-title">Login</h4>
+			 							<h4 class="card-title">Login</h2>
 										<div class="form-group">
 											<input type="text" class="form-control" name="user" placeholder="Enter Email" required><br>
 											<input type="Password" class="form-control" name="pass" placeholder="Enter Password" required><br>
