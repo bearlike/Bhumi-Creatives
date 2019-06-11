@@ -20,7 +20,7 @@
     }
 
     $conn->close();
-	header('location:projects.php');
+	header('location:projects.php#'.$desid);
 
 	$conn->close();
 ?>
