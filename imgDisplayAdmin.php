@@ -40,9 +40,9 @@
                 </div>
 								<p><h4> <?php echo $row['count(uname)']; ?><b> Likes</b></h4></p>
                 <div class="price_wrapper">
-                    <h2 class="price">
+                    <h4 class="price">
                         <?php echo $downloads; ?>
-                         <b>Downloads</b></h2>
+                         <b>Downloads</b></h4>
                 </div>
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
