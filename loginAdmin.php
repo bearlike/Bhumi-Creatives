@@ -16,9 +16,9 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 		<!-- Fonts Here -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	</head>
 	<!-- Head Close -->
 	<!-- Body Open -->
@@ -26,8 +26,8 @@
 		<div class="my-login-page">
 		<!-- PHP Open -->
 		<?php
-		/* For Logging the moderator in using User Name and Password Provided*/
-			if (isset($_POST['submit'])) {
+			/* For Logging the moderator in using User Name and Password Provided*/
+				if (isset($_POST['submit'])) {
 				/*Server mysqldb Address*/
 		    $servername = "localhost";
 				/*Username of the mysqldb server*/
@@ -71,7 +71,7 @@
 		        echo "0 results";
 		    }
 		    $conn->close();
-		}
+			}
 		?>
 		<!-- PHP Close -->
 		<section class="h-100">
