@@ -46,9 +46,9 @@
                 $rs2 = $conn->query($q2);
                 $row2 = $rs2->fetch_assoc();
                 if($rs1->num_rows !=0)
-                    echo "<button class='likebt' ><a href='like.php?desid=".$row['pid']."&status=1' style='text-decoration:none'><img src='assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a></button></div></div><br>";
+                    echo "<button class='button small red likebt'><a href='like.php?desid=".$row['pid']."&status=1' style='text-decoration:none'><img src='assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a></button></div></div><br>";
                 else
-				    echo "<button class='unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
+							    echo "<button class='button small unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
 
 				echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 			}

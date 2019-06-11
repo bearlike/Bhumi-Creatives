@@ -7,10 +7,10 @@
 <head>
     <title>Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="lib/css/w3.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+    <link rel="stylesheet" href="lib/css/luxbar.min.css">
 </head>
 <!-- Call headerAdmin.php for Navigation Bar-->
 <?php  include 'headerAdmin.php'; ?>

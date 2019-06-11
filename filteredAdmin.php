@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>Projects</title>
-
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
