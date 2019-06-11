@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Sign Up Page
+-->
 <html>
 	<head>
 		<!-- Page Title Open-->
@@ -21,7 +24,7 @@
 		<div class="my-login-page">
 		<!-- PHP Open -->
 		<?php
-			
+
 			if(isset($_POST['submit']))
 			{
 				include 'connection.php';
@@ -32,13 +35,13 @@
 				$pass = mysqli_real_escape_string($conn, $_POST['pass']);
 				$email = mysqli_real_escape_string($conn, $_POST['email']);
 				$copass = $_POST["conpass"];
-				
+
 				if($pass != $copass)
 				{
                     echo "\n<center><h3>Both Passwords are not same!!</h3></center>";
                     $flag=1;
 				}
-				
+
 				function valid_email($str)
 				{
 						return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
@@ -54,18 +57,18 @@
 
    					$q1="SELECT * FROM ulogin WHERE uname= '".$user."' ;";
    					$q2="SELECT * FROM ulogin WHERE email='".$email."';";
-   					
+
    					$r1=$conn->query($q1);
    					$r2=$conn->query($q2);
-   					
+
    					if($r1->num_rows!=0 )
    					{
-                		echo "\n<center><h3>Username already exists. Use another Username.</h3></center>"; 
+                		echo "\n<center><h3>Username already exists. Use another Username.</h3></center>";
                 		$flag=1;
                 	}
-   				    
+
    				    if($r2->num_rows!=0)
-   				    {	
+   				    {
    				    	echo "\n<center><h3>E-Mail ID already exists. Use another E_Mail ID.</h3></center>";
    				      	$flag=1;
    				  	}
@@ -77,8 +80,8 @@
 
 						    $first = $uni_id;
 						    $chars_to_do = 6 - strlen($uni_id);
-						    for ($i = 1; $i <= $chars_to_do; $i++){ 
-						        $first .= chr(rand(48,57)); 
+						    for ($i = 1; $i <= $chars_to_do; $i++){
+						        $first .= chr(rand(48,57));
 						    }
 
 						    $uid = $first;
@@ -91,12 +94,12 @@
 						$salted = '24@fu'.$pass.'45&deo';
 						$hashed = hash('sha512', $salted);
 
-   				  		header("location:verificationmail.php?email=".$email."&uid=".$uid."&hash=".$hashed."&user=".$user."");   
-						
-   				  	}	
+   				  		header("location:verificationmail.php?email=".$email."&uid=".$uid."&hash=".$hashed."&user=".$user."");
+
+   				  	}
 				}
 
-				
+
 				$conn->close();
 			}
 		?>
@@ -119,7 +122,7 @@
 				<input type="password" class="form-control" name="pass" placeholder="Enter Password" required><br>
 				<input type="Password" class="form-control" name="conpass" placeholder="Confirm Password" required><br>
 				<input type="submit"class="btn btn-primary btn-block" name="submit" value="SignUp" class="button">
-			</div>    
+			</div>
 				<br>Already have an account? <a href="index.php">Log in</a>
 		</form>
 </div></div></div></div></div></div>

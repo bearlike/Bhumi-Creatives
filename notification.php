@@ -1,8 +1,11 @@
+<!--
+	Title: Bhmui Creatives - Notifications Page for General Users
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Projects</title>
-	
+
  	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
@@ -27,7 +30,7 @@
 			while($row = $result->fetch_assoc()){
 				$message = $row['message'];
 				$dates = $row['dateCheck'];
-				
+
 				echo "<br><div class='w3-container'>".$dates."<br><b>Message</b> - ".$message."</div><br><br>";
 
 				$sql = "UPDATE notification SET status='read' WHERE uname='".$user."';";
@@ -39,6 +42,8 @@
 		}
 		$conn->close();
 	?>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
 
 </body>
 </html>

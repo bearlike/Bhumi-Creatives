@@ -1,11 +1,14 @@
+<!--
+	Title: Bhmui Creatives - Filter (Search) Project Page for Moderators
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Projects</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="styles/projects.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-	
+
 </head>
 
 	<!-- Body Opens -->
@@ -65,6 +68,8 @@
 			window.open('imgDisplay.php?pid='+event.srcElement.id,'_self');
 		}
 	</script>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
 
 </body>
 </html>

@@ -1,7 +1,10 @@
+<!--
+	Title: Bhmui Creatives - Uverify Account
+-->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Account Verification</title>
+	<title>Account Not Verified</title>
 </head>
 <body>
 

@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Individual Project Page for General Users
+-->
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 </head>
-
+<!-- Call header.php for Navigation Bar-->
 <?php include "header.php"; ?>
 <body>
     <?php include "imagetest.php"; ?>
@@ -20,17 +23,12 @@
                   <img src=<?php echo $url; ?> height="530px">
                 </div>
                 <div class="prod_thumbs">
-
                 </div>
             </div>
 
             <div class="cnt_right">
                 <h1 class="prod_title">
-                    <?php
-
-
-            					 echo ucfirst ($title);
-                    ?>
+                    <?php echo ucfirst ($title);?>
                 </h1>
                 <p class="prod_sub_title">
                     <?php echo ucfirst($doneby);?>
@@ -52,11 +50,7 @@
                         -<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
-                
                 <p><h4><?php echo $desc; ?></h4></p>
-
-
-
                 <div class="purchase_wrapper">
                   <center>
                     <div class="buy_btn"><a href="<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
@@ -66,7 +60,8 @@
             </div>
         </div>
     </div>
-
+    <!-- Call footer.php for Footer Bar-->
+    <!--Footer to be added-->
 
 </body>
 

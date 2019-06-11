@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Approvals (Pending) Project Page for Moderators
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +46,8 @@
 		$conn->close();
 	?>
 
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
 
 </body>
 </html>

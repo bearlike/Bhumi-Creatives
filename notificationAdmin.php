@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Notifications Page for Moderators
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +38,7 @@
 			while($row = $result->fetch_assoc()){
 				$message = $row['message'];
 				$dates = $row['dateCheck'];
-				
+
 				echo "<br>User - ".$row['uname']."<br>Dated on - ".$dates."<br><b>Message</b> - ".$message."<br>
 				Status - ".$row['status']."<br><br>";
 			}
@@ -51,6 +54,8 @@
 			window.open("notificationAdmin.php?clear=y","_self");
 		}
 	</script>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
 
 </body>
 </html>
