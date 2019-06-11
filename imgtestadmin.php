@@ -1,0 +1,28 @@
+<?php
+
+  include 'connection.php';
+
+  session_start();
+
+  if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
+    $user = $_SESSION['user'];
+  else
+    header("Location:loginAdmin.php");
+
+  $pid = $_GET['pid'];
+
+  $sql = "SELECT * FROM project WHERE pid='".$pid."';";
+  $result = $conn->query($sql);
+
+  $url = null;
+  if($row = $result->fetch_assoc())
+  {
+    $url = $row['image'];
+    $title = $row['title'];
+    $doneby = $row['uname'];
+          $desc = $row['descri'];
+    $tags = $row['tags'];
+  }
+
+
+  ?>

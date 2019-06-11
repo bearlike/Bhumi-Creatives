@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Image</title>
-	
-    <link rel="stylesheet" href="styles/styles.css">
-	
+    <title>Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 </head>
+
+<?php  include 'headerAdmin.php'; ?>
+
 <body>
 
-	<?php
-		include 'headerAdmin.php';
-		include 'connection.php';
+    <div class="content">
+        <div class="content_wrapper clearfix">
+            <div class="cnt_left">
+                <div class="main_img img">
+                  <img src="uploads\11951.jpg">
+                </div>
+                <div class="prod_thumbs">
 
-		session_start();
+                </div>
+            </div>
 
-		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
-			$user = $_SESSION['user'];
-		else
-			header("Location:loginAdmin.php");
+            <div class="cnt_right">
+                <h1 class="prod_title">
+                    <?php
+            					include "imgtestadmin.php";
+            					 echo ucfirst($row["title"]);
+                    ?>
+                </h1>
+                <p class="prod_sub_title">
+                    <?php echo ucfirst($doneby);?>
+                </p>
+                <div class="rating-wrapper">
+                    <p class="prod_rating"><span class="rating">* * * </span>* *</p>
+                    <p class="prod_rating_text"></p>
+                </div>
+                <div class="price_wrapper">
+                    <h2 class="price">
+                        <?php echo $row["downloads"]; ?>
+                         Downloads</h2>
+                </div>
+                <!--<div class="desc_wrapper">
+                    <ul class="desc_points">
+                        <!--<li class="desc_point"></*?php echo $desc ?*/></li>-->
+                  <!--  </ul>
+                </div>-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et nunc et erat posuere sollicitudin. Etiam vitae dapibus nulla. Sed facilisis arcu et justo consequat, sit amet tempus erat varius. Nulla aliquet est vel felis consequat tempor. Quisque eu ornare nibh. Sed sodales tortor leo, quis dictum est cursus ut. Nulla velit diam, convallis vitae tortor in.</p>
 
-		$pid = $_GET['pid'];
 
-		$sql = "SELECT * FROM project WHERE pid='".$pid."';";
-		$result = $conn->query($sql);
 
-		$url = null;
-		if($row = $result->fetch_assoc())
-		{	
-			$url = $row['image'];
-			$title = $row['title'];
-			$doneby = $row['uname'];
-            $desc = $row['descri'];
-			$tags = $row['tags'];
-		}
+                <div class="purchase_wrapper">
+                  <center>
+										<div class="buy_btn"><a href="<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
+										<div class="buy_btn"><a href="<?php echo"download.php?pid=".$pid."&type=s"?>">Download Source</div>
+                  </center>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		echo "<div class='w3-cell-row' style='width:100%;padding:20px;'><div class='w3-container w3-cell w3-mobile w3-col m6 l6 w3-image'><img src='".$url."' class='disImg' alt='Not Able to Display' /></div>";
-
-		echo "<div class=' w3-container w3-cell w3-mobile w3-cell-middle w3-col m6 l6'><center><h2>".$title."</h2>by ".$doneby."<br><br><br><b>Description :</b>".$desc."<br><br><b>Tags</b> : ".$tags."<br><br><br>".$row['downloads']." Downloads<br><br><br>";
-
-		echo "<form action='download.php?pid=".$pid."&type=i' method='post'><input type='submit' class='button' value='Download Now'/></form><br>";
-        echo "<form action='download.php?pid=".$pid."&type=s' method='post'><button class='button'>Download Source File</button></form></center></div></div>";
-
-        $conn->close();
-		?>
 
 </body>
+
 </html>

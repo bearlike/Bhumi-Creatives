@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 </head>
 
-<?php include "header.php" ?>
-
+<?php include "header.php"; ?>
+<?php include "imagetest.php"; ?>
 <body>
 
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
                 <div class="main_img img">
-                  <img src="uploads\11951.jpg">
+                  <img src=<?php echo $url; ?> height="530px">
+
                 </div>
                 <div class="prod_thumbs">
 
@@ -28,7 +29,7 @@
             <div class="cnt_right">
                 <h1 class="prod_title">
                     <?php
-            					include "imagetest.php";
+
             					 echo ucfirst($row["title"]);
                     ?>
                 </h1>
@@ -42,7 +43,7 @@
                 <div class="price_wrapper">
                     <h2 class="price">
                         <?php echo $row["downloads"]; ?>
-                        </br>Number of Downloads</h2>
+                         Downloads</h2>
                 </div>
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
@@ -52,10 +53,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et nunc et erat posuere sollicitudin. Etiam vitae dapibus nulla. Sed facilisis arcu et justo consequat, sit amet tempus erat varius. Nulla aliquet est vel felis consequat tempor. Quisque eu ornare nibh. Sed sodales tortor leo, quis dictum est cursus ut. Nulla velit diam, convallis vitae tortor in.</p>
 
 
+
                 <div class="purchase_wrapper">
                   <center>
-                    <div class="buy_btn">Download Now</div>
-                    <div class="buy_btn">Download Source</div>
+                    <div class="buy_btn"><a href="<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
+                    <div class="buy_btn"><a href="<?php echo"download.php?pid=".$pid."&type=s"?>">Download Source</div>
                   </center>
                 </div>
             </div>
