@@ -60,9 +60,9 @@
 					<div class="card fat">
 						<div class="card-body">
 							<form action="loginAdmin.php" method="POST">
-								<h4 class="card-title">Moderator Login</h2>
-									<input type="password" name="pass" placeholder="Enter Password" required/><br>
-									<input type="password" name="conPass" placeholder="Enter Confirm Password" required/><br><br>
+								<h4 class="card-title">Reset Password</h4>
+									<input class="form-control" type="password" name="pass" placeholder="Enter Password" required/><br>
+									<input class="form-control" type="password" name="conPass" placeholder="Enter New Password Again" required/><br><br>
 									<input type="submit" name="subPass" value="Change Password"class="btn btn-primary btn-block" />
 								</form>
 	</center>
