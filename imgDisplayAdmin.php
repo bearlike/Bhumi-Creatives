@@ -46,7 +46,7 @@
                 </div>
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
-                        <!--<li class="desc_point"></*?php echo $desc ?*/></li>-->
+                        <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
                 <p><h4><?php echo $desc; ?></h4></p>
