@@ -28,7 +28,7 @@
             <div class="cnt_right">
                 <h1 class="prod_title">
                     <?php
-            					 echo ucfirst($row["title"]);
+            					 echo ucfirst ($title);
                     ?>
                 </h1>
                 <p class="prod_sub_title">
@@ -38,17 +38,18 @@
                     <p class="prod_rating"><span class="rating">* * * </span>* *</p>
                     <p class="prod_rating_text"></p>
                 </div>
+								<p><h4> <?php echo $row['count(uname)']; ?><b> Likes</b></h4></p>
                 <div class="price_wrapper">
                     <h2 class="price">
-                        <?php echo $row["downloads"]; ?>
-                         Downloads</h2>
+                        <?php echo $downloads; ?>
+                         <b>Downloads</b></h2>
                 </div>
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
                         <!--<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et nunc et erat posuere sollicitudin. Etiam vitae dapibus nulla. Sed facilisis arcu et justo consequat, sit amet tempus erat varius. Nulla aliquet est vel felis consequat tempor. Quisque eu ornare nibh. Sed sodales tortor leo, quis dictum est cursus ut. Nulla velit diam, convallis vitae tortor in.</p>
+                <p><h4><?php echo $desc; ?></h4></p>
 
 
 
