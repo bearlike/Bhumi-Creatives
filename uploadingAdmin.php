@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Admin Upload Form
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,15 +31,15 @@
 
             $first = $uni_id;
             $chars_to_do = 8 - strlen($uni_id);
-            for ($i = 1; $i <= $chars_to_do; $i++){ 
-                $first .= chr(rand(48,57)); 
+            for ($i = 1; $i <= $chars_to_do; $i++){
+                $first .= chr(rand(48,57));
             }
 
             $pid = $first;
 
             $sql1 = "SELECT * FROM project WHERE pid='".$pid."';";
             $result1 = $conn->query($sql1);
-            
+
             $sql2 = "SELECT * FROM approval WHERE pid='".$pid."';";
             $result2 = $conn->query($sql2);
 
@@ -126,7 +129,7 @@
                     $sql = "INSERT INTO project VALUES('".$pid."','".$user."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."',0);";
                     $result = $conn->query($sql) or die(mysqli_error($conn));
 
-                    
+
                     header('location:projectsAdmin.php');
                     exit();
                 }
@@ -138,7 +141,7 @@
         $conn->close();
     }
 ?>
-    
+
     <div class="forms w3-border w3-round-large">
         <div class="w3-container w3-blue w3-round-large">
             <h2>Upload Form</h2>
@@ -161,12 +164,12 @@
             <input class="w3-input" type="text" name='descri' maxlength="250" required />
             (Maximum 250 Characters allowed)
         </p>
-  
+
         <p>
             <label>City</label>
-            
+
                 <select class="w3-input" name="cars">
-                
+
                 <option value="Agra">Agra</option>
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Alappuzha">Alappuzha</option>
@@ -214,8 +217,8 @@
                 <option value="Udaipur">Udaipur</option>
                 <option value="Vijayawada">Vijayawada</option>
                 <option value="Visakhapatnam">Visakhapatnam</option>
-                 
-   
+
+
 
                 </select>
 
@@ -242,9 +245,11 @@
         <p>
             <input class="w3-button w3-large w3-blue w3-round-large" type="submit" name="submit" value="Upload">
         </p>
-        
+
         </form>
     </div>
+		<!-- Call footer.php for Footer Bar-->
+		<!--Footer to be added-->
 
 </body>
 </html>

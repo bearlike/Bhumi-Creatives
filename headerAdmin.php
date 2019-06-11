@@ -1,5 +1,8 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--
+  Bhumi - Creatives Platform
+  Navigation Bar for Moderators User
+  Dependencies: luxbar
+-->
 <link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
 <link rel="stylesheet" type="text/css" href="lib/textbox-css/textbox.css">
@@ -25,7 +28,7 @@
 					<!-- Search Bar -->
 					<form action='filteredAdmin.php' method='post'>
 						<input type='text' name='filter' class="textbox7" placeholder='Filter by tags' required/>
-	      		<input type='submit' value='Filter' />
+	      		<input type='submit' value='Filter' style="color:#000; />
 	 				</form>
 				  </a>
 				</li>

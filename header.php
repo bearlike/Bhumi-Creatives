@@ -1,10 +1,12 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--
+  Bhumi - Creatives Platform
+  Navigation Bar for General User
+  Dependencies: luxbar
+-->
 <link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
-<header id="luxbar" class="luxbar-fixed">
+<header id="luxbar" class="luxbar-default">
     <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
     <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
         <ul class="luxbar-navigation">
@@ -17,7 +19,7 @@
                     <!-- Search Bar -->
                     <form action='filtered.php' method='post'>
                         <input type='text' name='filter' placeholder='Filter by tags' required/>
-                        <input type='submit' value='Filter' />
+                        <input type='submit' value='Filter' style="color:#000;"/>
                     </form>
                 </a>
             </li>
@@ -28,5 +30,3 @@
         </ul>
     </div>
 </header>
-
-<br><br><br>

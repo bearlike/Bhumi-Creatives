@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Reset Password
+-->
 <!DOCTYPE html>
 <html>
 <head>

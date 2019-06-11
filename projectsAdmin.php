@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Project Home Page for Moderators
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +56,9 @@
 			window.open('imgDisplayAdmin.php?pid='+event.srcElement.id,'_self');
 		}
 	</script>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
+
 </body>
 <!-- Body Closes -->
 </html>

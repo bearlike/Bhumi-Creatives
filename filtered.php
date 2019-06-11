@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Filter (Search) Project Page for Users
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +64,8 @@
 			window.open('imgDisplay.php?pid='+event.srcElement.id,'_self');
 		}
 	</script>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
 
 </body>
 </html>

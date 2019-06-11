@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Forget Password Page
+-->
 <!DOCTYPE html>
 <html>
 <!-- Head Open -->

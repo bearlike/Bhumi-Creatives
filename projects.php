@@ -1,3 +1,6 @@
+<!--
+	Title: Bhmui Creatives - Project Home Page for general users
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,5 +62,8 @@
 			window.open('imgDisplay.php?pid='+event.srcElement.id,'_self');
 		}
 	</script>
+	<!-- Call footer.php for Footer Bar-->
+	<!--Footer to be added-->
+
 </body>
 </html>
