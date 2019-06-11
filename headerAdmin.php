@@ -28,7 +28,7 @@
 					<!-- Search Bar -->
 					<form action='filteredAdmin.php' method='post'>
 						<input type='text' name='filter' class="textbox7" placeholder='Filter by tags' required/>
-	      		<input type='submit' value='Filter' style="color:#000; />
+	      		<input type='submit' value='Filter' style="color:#000;" />
 	 				</form>
 				  </a>
 				</li>
