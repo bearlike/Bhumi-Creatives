@@ -164,7 +164,61 @@
   
         <p>
             <label>City</label>
-            <input class="w3-input" type="text" name='city' required />
+            
+                <select class="w3-input" name="cars">
+                
+                <option value="Agra">Agra</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Alappuzha">Alappuzha</option>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Bhubaneshwar">Bhubaneshwar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Chittaurgarh">Chittaurgarh</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Cuttack">Cuttack</option>
+                <option value="Dehradun">Dehradun</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Gangtok">Gangtok</option>
+                <option value="Guwahati">Guwahati</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Jamshedpur">Jamshedpur</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Kanyakumari">Kanyakumari</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Mysore">Mysore</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Noida">Noida</option>
+                <option value="Ooty">Ooty</option>
+                <option value="Panaji">Panaji</option>
+                <option value="Patna">Patna</option>
+                <option value="Pondicherry">Pondicherry</option>
+                <option value="Portblair">Portblair</option>
+                <option value="Pune">Pune</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Rameswaram">Rameswaram</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Secunderabad">Secunderabad</option>
+                <option value="Shimla">Shimla</option>
+                <option value="Surat">Surat</option>
+                <option value="Thanjavur">Thanjavur</option>
+                <option value="Thiruchchirapalli">Thiruchchirapalli</option>
+                <option value="Tirumala">Tirumala</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+                 
+   
+
+                </select>
+
         </p>
 
         <p>
