@@ -9,7 +9,7 @@
 <!-- Footer section -->
 <link rel="stylesheet" type="text/css" href="lib/font-awesome/4.7.0/css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="lib/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="lib/css/w3.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 

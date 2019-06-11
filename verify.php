@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>Account Verified</title>
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 </head>
 <body>
 	<?php

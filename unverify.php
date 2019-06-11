@@ -5,6 +5,7 @@
 <html>
 <head>
 	<title>Account Not Verified</title>
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 </head>
 <body>
 

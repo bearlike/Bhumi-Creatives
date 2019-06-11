@@ -5,52 +5,41 @@
 <html>
 <head>
 	<title>Upload</title>
-
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
 </head>
 
 <body>
 
     <?php
-        include 'header.php';
+        include 'headerAdmin.php';
         session_start();
-
         if(isset($_SESSION['user']))
             $user = $_SESSION['user'];
         else
             header("Location:index.php");
-
-    if(isset($_POST['submit']))
-    {
-        include 'connection.php';
-
-        $user = $_SESSION['user'];
-
-        do{
-            $uni_id = rand(10,99);
-
-            $first = $uni_id;
-            $chars_to_do = 8 - strlen($uni_id);
-            for ($i = 1; $i <= $chars_to_do; $i++){
-                $first .= chr(rand(48,57));
-            }
-
-            $pid = $first;
-
-            $sql1 = "SELECT * FROM project WHERE pid='".$pid."';";
-            $result1 = $conn->query($sql1);
-
-            $sql2 = "SELECT * FROM approval WHERE pid='".$pid."';";
-            $result2 = $conn->query($sql2);
-
-        }while($result1->num_rows > 0 || $result2->num_rows > 0);
-
-
+		    if(isset($_POST['submit']))
+		    {
+		        include 'connection.php';
+		        $user = $_SESSION['user'];
+		        do{
+		            $uni_id = rand(10,99);
+		            $first = $uni_id;
+		            $chars_to_do = 8 - strlen($uni_id);
+		            for ($i = 1; $i <= $chars_to_do; $i++){
+		                $first .= chr(rand(48,57));
+		            }
+		            $pid = $first;
+		            $sql1 = "SELECT * FROM project WHERE pid='".$pid."';";
+		            $result1 = $conn->query($sql1);
+		            $sql2 = "SELECT * FROM approval WHERE pid='".$pid."';";
+		            $result2 = $conn->query($sql2);
+		        } while($result1->num_rows > 0 || $result2->num_rows > 0);
             $target_dir = "uploads/";
             $target_file = $target_dir . basename($_FILES["file"]["name"]);
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
             $target_file_img = $target_dir . $pid . "." . $imageFileType;
 
             // Check if image file is a actual image or fake image
@@ -99,9 +88,7 @@
             $target_file = $target_dir . basename($_FILES["source"]["name"]);
             $uploadOk = 1;
             $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
             $target_file = $target_dir . $pid . "." . $fileType;
-
             // Check file size
             if ($_FILES["source"]["size"] > 52428800)
             {
@@ -128,8 +115,6 @@
 
                     $sql = "INSERT INTO project VALUES('".$pid."','".$user."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."',0);";
                     $result = $conn->query($sql) or die(mysqli_error($conn));
-
-
                     header('location:projectsAdmin.php');
                     exit();
                 }
@@ -140,112 +125,104 @@
             }
         $conn->close();
     }
-?>
+		?>
 
     <div class="forms w3-border w3-round-large">
-        <div class="w3-container w3-blue w3-round-large">
+        <div class="w3-container w3-black ">
             <h2>Upload Form</h2>
         </div>
 
         <form class="w3-container w3-mobile" method='post' action='uploading.php' enctype="multipart/form-data">
         <p>
-            <label>Design Image</label>
+            <label>Export Image</label>
             <input class="w3-input" type="file" name='file' required />
-            (*File size must be < 5MB) (Allowed formats are JPEG,JPG,PNG and GIF)
+            <div style="color:red;">* File size must be < 5MB </div>
+						<div>Allowed formats are JPEG, JPG, PNG and GIF</div>
         </p><br>
 
         <p>
-            <label>Design Name</label>
+            <label>Project/Design Name</label>
             <input class="w3-input" type="text" name='name' required />
-        </p>
+        </p><br>
 
         <p>
             <label>Description</label>
             <input class="w3-input" type="text" name='descri' maxlength="250" required />
             (Maximum 250 Characters allowed)
-        </p>
+        </p><br>
 
         <p>
             <label>City</label>
-
+								<!--Popular Cities within India-->
                 <select class="w3-input" name="cars">
-
-                <option value="Agra">Agra</option>
-                <option value="Ahmedabad">Ahmedabad</option>
-                <option value="Alappuzha">Alappuzha</option>
-                <option value="Amritsar">Amritsar</option>
-                <option value="Bangalore">Bangalore</option>
-                <option value="Bhavnagar">Bhavnagar</option>
-                <option value="Bhopal">Bhopal</option>
-                <option value="Bhubaneshwar">Bhubaneshwar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Chittaurgarh">Chittaurgarh</option>
-                <option value="Coimbatore">Coimbatore</option>
-                <option value="Cuttack">Cuttack</option>
-                <option value="Dehradun">Dehradun</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Gangtok">Gangtok</option>
-                <option value="Guwahati">Guwahati</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Jaipur">Jaipur</option>
-                <option value="Jamshedpur">Jamshedpur</option>
-                <option value="Kanpur">Kanpur</option>
-                <option value="Kanyakumari">Kanyakumari</option>
-                <option value="Kolkata">Kolkata</option>
-                <option value="Lucknow">Lucknow</option>
-                <option value="Madurai">Madurai</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Mysore">Mysore</option>
-                <option value="Nagpur">Nagpur</option>
-                <option value="Noida">Noida</option>
-                <option value="Ooty">Ooty</option>
-                <option value="Panaji">Panaji</option>
-                <option value="Patna">Patna</option>
-                <option value="Pondicherry">Pondicherry</option>
-                <option value="Portblair">Portblair</option>
-                <option value="Pune">Pune</option>
-                <option value="Rajkot">Rajkot</option>
-                <option value="Rameswaram">Rameswaram</option>
-                <option value="Ranchi">Ranchi</option>
-                <option value="Secunderabad">Secunderabad</option>
-                <option value="Shimla">Shimla</option>
-                <option value="Surat">Surat</option>
-                <option value="Thanjavur">Thanjavur</option>
-                <option value="Thiruchchirapalli">Thiruchchirapalli</option>
-                <option value="Tirumala">Tirumala</option>
-                <option value="Udaipur">Udaipur</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Visakhapatnam">Visakhapatnam</option>
-
-
-
+	                <option value="Agra">Agra</option>
+	                <option value="Ahmedabad">Ahmedabad</option>
+	                <option value="Alappuzha">Alappuzha</option>
+	                <option value="Amritsar">Amritsar</option>
+	                <option value="Bangalore">Bangalore</option>
+	                <option value="Bhavnagar">Bhavnagar</option>
+	                <option value="Bhopal">Bhopal</option>
+	                <option value="Bhubaneshwar">Bhubaneshwar</option>
+	                <option value="Chandigarh">Chandigarh</option>
+	                <option value="Chennai">Chennai</option>
+	                <option value="Chittaurgarh">Chittaurgarh</option>
+	                <option value="Coimbatore">Coimbatore</option>
+	                <option value="Cuttack">Cuttack</option>
+	                <option value="Dehradun">Dehradun</option>
+	                <option value="Delhi">Delhi</option>
+	                <option value="Gangtok">Gangtok</option>
+	                <option value="Guwahati">Guwahati</option>
+	                <option value="Hyderabad">Hyderabad</option>
+	                <option value="Jaipur">Jaipur</option>
+	                <option value="Jamshedpur">Jamshedpur</option>
+	                <option value="Kanpur">Kanpur</option>
+	                <option value="Kanyakumari">Kanyakumari</option>
+	                <option value="Kolkata">Kolkata</option>
+	                <option value="Lucknow">Lucknow</option>
+	                <option value="Madurai">Madurai</option>
+	                <option value="Mumbai">Mumbai</option>
+	                <option value="Mysore">Mysore</option>
+	                <option value="Nagpur">Nagpur</option>
+	                <option value="Noida">Noida</option>
+	                <option value="Ooty">Ooty</option>
+	                <option value="Panaji">Panaji</option>
+	                <option value="Patna">Patna</option>
+	                <option value="Pondicherry">Pondicherry</option>
+	                <option value="Portblair">Portblair</option>
+	                <option value="Pune">Pune</option>
+	                <option value="Rajkot">Rajkot</option>
+	                <option value="Rameswaram">Rameswaram</option>
+	                <option value="Ranchi">Ranchi</option>
+	                <option value="Secunderabad">Secunderabad</option>
+	                <option value="Shimla">Shimla</option>
+	                <option value="Surat">Surat</option>
+	                <option value="Thanjavur">Thanjavur</option>
+	                <option value="Thiruchchirapalli">Thiruchchirapalli</option>
+	                <option value="Tirumala">Tirumala</option>
+	                <option value="Udaipur">Udaipur</option>
+	                <option value="Vijayawada">Vijayawada</option>
+	                <option value="Visakhapatnam">Visakhapatnam</option>
                 </select>
-
-        </p>
-
+        </p><br>
         <p>
             <label>Cause</label>
             <input class="w3-input" type="text" name='cause' required />
             (Eg - RTE)
-        </p>
-
+        </p><br>
         <p>
             <label>Tags</label>
             <input class="w3-input" type="text" name='tag' required />
             (Separate different tags using commas)
-        </p>
-
+        </p><br>
         <p>
             <label>Source File</label>
             <input class="w3-input" type="file" name='source' required />
-            (*File size must be < 50MB) (Allowed formats are ZIP,RAR,TAR and PSD)
+						<div style="color:red;">* File size must be < 50MB </div>
+						<div>Allowed formats are ZIP,RAR,TAR and PSD</div>
         </p><br>
-
         <p>
-            <input class="w3-button w3-large w3-blue w3-round-large" type="submit" name="submit" value="Upload">
-        </p>
-
+            <input class="large blue button" type="submit" name="submit" value="Upload">
+        </p><br>
         </form>
     </div>
 		<!-- Call footer.php for Footer Bar-->

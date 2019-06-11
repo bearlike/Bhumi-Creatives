@@ -5,9 +5,9 @@
 <html>
 <head>
 	<title>Projects</title>
-
-    <link rel="stylesheet" href="styles/projects.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>

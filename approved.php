@@ -5,8 +5,8 @@
 <html>
 <head>
 	<title>Approvals</title>
-
-    <link rel="stylesheet" href="styles/approval.css">
+  <link rel="stylesheet" href="styles/approval.css">
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>

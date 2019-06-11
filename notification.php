@@ -5,7 +5,8 @@
 <html>
 <head>
 	<title>Notification</title>
- 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+ 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 		$sql = "SELECT * FROM notification WHERE uname='".$user."';";
 		$result = $conn->query($sql) or die($conn->error);
 		if ($result->num_rows > 0){
-			echo "<h3 class='w3-container'>Notifications are -</h3>";
+			echo "<h3 class='w3-container'>Notifications</h3>";
 			while($row = $result->fetch_assoc()){
 				$message = $row['message'];
 				$dates = $row['dateCheck'];
@@ -31,7 +32,7 @@
 			}
 		}
 		else{
-			echo "<h3 class='w3-container'>No Notifications to Display.</h3>";
+			echo "<h3 class='w3-container'>All Notifications Read.</h3>";
 		}
 		$conn->close();
 	?>
