@@ -22,6 +22,13 @@
     $doneby = $row['uname'];
     $desc = $row['descri'];
     $tags = $row['tags'];
+    $downloads= $row["downloads"];
   }
 
-  ?>
+  $q1="select count(uname) from likes where pid='".$row['pid']."';";
+  $rs1=$conn->query($q1);
+  if($row=$rs1->fetch_assoc())
+  {
+    $likes= $row['count(uname)'];
+   }
+ ?>
