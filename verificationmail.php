@@ -1,12 +1,12 @@
 <?php 
-    use lib\PHPMailer\PHPMailer\PHPMailer;
-    use lib\PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     
     include 'connection.php';
     
-    require 'lib/PHPMailer/src/Exception.php';
-    require 'lib/PHPMailer/src/PHPMailer.php';
-    require 'lib/PHPMailer/src/SMTP.php';
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
 
     // Instantiation and passing `true` enables exceptions
     $mail = new PHPMailer(true); 
