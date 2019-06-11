@@ -13,12 +13,12 @@
 <?php  include 'headerAdmin.php'; ?>
 
 <body>
-
+ <?php include "imgtestadmin.php"; ?>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
                 <div class="main_img img">
-                  <img src="uploads\11951.jpg">
+                    <img src=<?php echo $url; ?> height="530px">
                 </div>
                 <div class="prod_thumbs">
 
@@ -28,7 +28,6 @@
             <div class="cnt_right">
                 <h1 class="prod_title">
                     <?php
-            					include "imgtestadmin.php";
             					 echo ucfirst($row["title"]);
                     ?>
                 </h1>
