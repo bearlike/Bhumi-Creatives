@@ -19,6 +19,7 @@
 	      </li>
 	      <li class="luxbar-item"><a class="active" href="projectsAdmin.php">Home</a></li>
 	      <li class="luxbar-item"><a href="approval.php">Request</a></li>
+        <li class="luxbar-item"><a href="uploadingAdmin.php">Upload</a></li>
 	      <li class="luxbar-item">
 				<a>
 					<!-- Search Bar -->
