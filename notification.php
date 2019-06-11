@@ -37,7 +37,7 @@
 		$conn->close();
 	?>
 	<!-- Call footer.php for Footer Bar-->
-	<!--Footer to be added-->
+	<?php include "footer.php"; ?>
 
 </body>
 </html>
