@@ -15,7 +15,7 @@
 <!-- Call headerAdmin.php for Navigation Bar-->
 <?php  include 'headerAdmin.php'; ?>
 <body>
- <?php include "imgtestadmin.php"; ?>
+ <?php include 'approvedimgtest.php'; ?>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
@@ -32,16 +32,7 @@
                 <p class="prod_sub_title">
                     <?php echo ucfirst($doneby);?>
                 </p>
-                <div class="rating-wrapper">
-                    <p class="prod_rating"><span class="rating">* * * </span>* *</p>
-                    <p class="prod_rating_text"></p>
-                </div>
-								<p><h4> <?php echo $row['count(uname)']; ?><b> Likes</b></h4></p>
-                <div class="price_wrapper">
-                    <h4 class="price">
-                        <?php echo $downloads; ?>
-                         <b>Downloads</b></h4>
-                </div>
+                
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
                         <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
@@ -51,7 +42,7 @@
                 <div class="purchase_wrapper">
                   <center>
 										<div class="buy_btn"><a href="<?php echo "approved.php?pid=".$row['pid']."&stat=A"?>">Approve</div>
-										<div class="buy_btn"><a href="<?php echo"approved.php?pid=".$row['pid']."&stat=D"?>">Decline</div>
+										<div class="buy_btn"><a href="<?php echo "approved.php?pid=".$row['pid']."&stat=D"?>">Decline</div>
                   </center>
                 </div>
             </div>
