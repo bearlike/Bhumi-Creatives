@@ -8,7 +8,9 @@
 	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+
 	<script src="cities.js"></script>
+    <script src="programe.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 							$first = $uni_id;
 							$chars_to_do = 8 - strlen($uni_id);
 							for ($i = 1; $i <= $chars_to_do; $i++) {
-									$first = chr(rand(48, 57));
+									$first .= chr(rand(48, 57));
 							}
 
 							$pid = $first;
@@ -115,8 +117,11 @@
 							// if everything is ok, try to upload file
 					} else {
 							if (move_uploaded_file($_FILES["source"]["tmp_name"], $target_file)) {
+									$city = $_POST['city'];
+									$city = substr($city, 1, strlen($city)-1);
+
 									$tags = $_POST['tag'].
-									",".$_POST['city'].
+									",".$city.
 									",".$_POST['cause'];
 
 									$sql = "INSERT INTO approval VALUES('".$user.
@@ -124,7 +129,8 @@
 									"','".$_POST['name'].
 									"','".$target_file_img.
 									"','".$_POST['descri'].
-									"','".$_POST['city'].
+									"','".$_POST['state'].
+									"','".$city.
 									"','".$_POST['cause'].
 									"','".$tags.
 									"','".$target_file.
@@ -166,9 +172,9 @@
             (Maximum 250 Characters allowed)
         </p><br>
 
-        <p>
+        <!--<p>
             <label>City</label>
-								<!--Popular Cities within India-->
+								Popular Cities within India
                 <select class="w3-input" name="city">
 	                <option value="Agra">Agra</option>
 	                <option value="Ahmedabad">Ahmedabad</option>
@@ -218,15 +224,19 @@
 	                <option value="Vijayawada">Vijayawada</option>
 	                <option value="Visakhapatnam">Visakhapatnam</option>
                 </select>
-        </p><br>
+        </p><br>-->
 
-				<p> <label> state </label>
-					<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="w3-input" required></select>
-					<select id ="state" class="form-control" required></select>
+				<p>
+					<label>State </label>
+					<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="state" class="w3-input" required></select>
+				</p><br>
+
+				<p>
+					<label>City</label>
+					<select id ="state" class="form-control w3-input" name="city" required></select>
 					<script language="javascript">print_state("sts");</script>
 
-				</p>
-
+				</p><br>
 
 				<p>
 						<label>Programme</label>
