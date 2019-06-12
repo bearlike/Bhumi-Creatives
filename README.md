@@ -18,6 +18,9 @@ This project is licensed under the terms of the [MIT license](LICENSE) and is av
 * **Suraj GSN** - [Suraj](https://github.com/gsnvsuraj/)
 * **Mahesh NV** - [Mahesh](https://github.com/MAHESH-N-V/)
 
+## Acknowledgments
+* Hat tip to anyone whose code was used.
+* Hat tip to the open source community (We love you ❤️).
 
 ## <br>
 This readme was written with ❤️
