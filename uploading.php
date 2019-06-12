@@ -168,7 +168,7 @@
         <p>
             <label>City</label>
 								<!--Popular Cities within India-->
-                <select class="w3-input" name="cars">
+                <select class="w3-input" name="city">
 	                <option value="Agra">Agra</option>
 	                <option value="Ahmedabad">Ahmedabad</option>
 	                <option value="Alappuzha">Alappuzha</option>

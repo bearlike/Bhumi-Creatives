@@ -132,7 +132,7 @@
             <h2>Upload Form</h2>
         </div>
 
-        <form class="w3-container w3-mobile" method='post' action='uploading.php' enctype="multipart/form-data">
+        <form class="w3-container w3-mobile" method='post' action='uploadingAdmin.php' enctype="multipart/form-data">
         <p>
             <label>Export Image</label>
             <input class="w3-input" type="file" name='file' required />
@@ -154,7 +154,7 @@
         <p>
             <label>City</label>
 								<!--Popular Cities within India-->
-                <select class="w3-input" name="cars">
+                <select class="w3-input" name="city">
 	                <option value="Agra">Agra</option>
 	                <option value="Ahmedabad">Ahmedabad</option>
 	                <option value="Alappuzha">Alappuzha</option>
