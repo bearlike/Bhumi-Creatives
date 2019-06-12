@@ -8,6 +8,7 @@
 	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+	<script src="cities.js"></script>
 </head>
 
 <body>
@@ -218,6 +219,15 @@
 	                <option value="Visakhapatnam">Visakhapatnam</option>
                 </select>
         </p><br>
+
+				<p> <label> state </label>
+					<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="w3-input" required></select>
+					<select id ="state" class="form-control" required></select>
+					<script language="javascript">print_state("sts");</script>
+
+				</p>
+
+
 				<p>
 						<label>Programme</label>
 								<!--programme-->
@@ -243,8 +253,11 @@
             <input class="large blue button" type="submit" name="submit" value="Upload">
         </p><br>
         </form>
-    </div>		<!-- Call footer.php for Footer Bar-->
+    </div>
+			<!-- Call footer.php for Footer Bar-->
     <?php include "footer.php"; ?>
+
+
 
 </body>
 </html>
