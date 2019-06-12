@@ -118,11 +118,11 @@
 					} else {
 							if (move_uploaded_file($_FILES["source"]["tmp_name"], $target_file)) {
 									$city = $_POST['city'];
-									$city = substr($city, 1, strlen($city)-1);
+									$city = substr($city, 1, strlen($city)-2);
 
 									$tags = $_POST['tag'].
 									",".$city.
-									",".$_POST['cause'];
+									",".$_POST['programme'];
 
 									$sql = "INSERT INTO approval VALUES('".$user.
 									"','".$pid.
@@ -131,7 +131,8 @@
 									"','".$_POST['descri'].
 									"','".$_POST['state'].
 									"','".$city.
-									"','".$_POST['cause'].
+									"','".$_POST['programme'].
+									"','".$_POST['project'].
 									"','".$tags.
 									"','".$target_file.
 									"');";
@@ -239,14 +240,14 @@
 				</p><br>
 
 				<p>
-						<label>Programme</label>
-								<!--programme-->
-								<select class="w3-input" name="cause">
-									<option value="cat">Catalyse</option>
-									<option value="ign">Ignite</option>
-									<option value="ref">Refresh</option>
-									<option value="gen">General</option>
-								</select>
+					<label>Programme</label>
+					<select onchange="print_project('programme', this.selectedIndex);" id="pro" name ="programme" class="form-control w3-input" required></select>
+				</p><br>
+				
+				<p>			
+					<label>Project</label>
+					<select id ="programme" class="form-control w3-input" name="project" required></select>
+					<script language="javascript">print_programme("pro");</script>
 				</p><br>
         <p>
             <label>Tags</label>

@@ -38,8 +38,7 @@
         }
 				echo "<div ><table><tr><td><a onclick='redir()' style='cursor:zoom-in'><img name='".$title."' class='projectImg' id='".$row['pid']."' src='".$url."' alt='Not able to display' /></a>";
 				echo "<br><b>Title: </b>".ucfirst($title)."<br><b>Tags: </b>".$row['tags']."</td>";
-				echo "
-									<td>
+				echo "				<td>
 										<ul class=\"button-group\">
 											<li><button class=\"small green button\"><a href='approved.php?pid=".$row['pid']."&stat=A'>Approve</a></button></li>
 											<li><button class=\"small red button\"><a href='approved.php?pid=".$row['pid']."&stat=D'>Decline</a></button></li>
