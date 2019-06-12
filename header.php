@@ -28,8 +28,8 @@
                 </a>
             </li>
 
-            <li class="luxbar-item"><a href="uploading.php">Uploads</a></li>
-            <li class="luxbar-item"><a href="notification.php">Notification </a></li>
+            <li class="luxbar-item"><a href="uploading.php">Upload</a></li>
+            <li class="luxbar-item"><a href="notification.php">Notifications </a></li>
             <li class="luxbar-item"><a href="myAccount.php">My Account</a></li>
             <li class="luxbar-item"><a href="logout.php">Logout</a></li>
         </ul>
