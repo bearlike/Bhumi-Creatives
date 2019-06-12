@@ -32,17 +32,19 @@
                 <p class="prod_sub_title">
                     <?php echo ucfirst($doneby);?>
                 </p>
-                
+
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
                         <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
+
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>
 										<div class="buy_btn"><a href="<?php echo "approved.php?pid=".$row['pid']."&stat=A"?>">Approve</div>
 										<div class="buy_btn"><a href="<?php echo "approved.php?pid=".$row['pid']."&stat=D"?>">Decline</div>
+                  
                   </center>
                 </div>
             </div>
