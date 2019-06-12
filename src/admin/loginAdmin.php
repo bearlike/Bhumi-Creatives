@@ -12,10 +12,10 @@
 		<link rel="icon" type="image/png" href="assets/img/siteicon.png">
 		<!-- Site Icon Close-->
 		<!-- CSS Stylesheets Here -->
-		<link rel="stylesheet" type="text/css" href="assets/css/login.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/login.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/my-login.css">
 		<link rel="stylesheet" href="../../lib/bootstrap/4.0.0/css/bootstrap.min.css">
 		<!-- Fonts Here -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -79,7 +79,7 @@
 				<div class="row justify-content-md-center h-100">
 					<div class="card-wrapper">
 						<div class="brand">
-							<img src="assets/img/logo.jpg" alt="Bhumi logo">
+							<img src="../../assets/img/logo.jpg" alt="Bhumi logo">
 						</div>
 						<div class="card fat">
 							<div class="card-body">
@@ -100,7 +100,7 @@
 						<!-- Footer section -->
 						<section class="footer-section">
 							<div class="social-links-warp">
-								<p class="text-white text-center mt-2">Came here by mistake?<br><a href="index.php">Click here to go back to User Login!</a></p>
+								<p class="text-white text-center mt-2">Came here by mistake?<br><a href="../index.php">Click here to go back to User Login!</a></p>
 							</div>
 						</section>
 						<!-- Footer section end -->

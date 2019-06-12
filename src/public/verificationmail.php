@@ -5,9 +5,9 @@ use PHPMailer\ PHPMailer\ Exception;
 
 include '../common/connection.php';
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require '../../lib/PHPMailer/src/Exception.php';
+require '../../lib/PHPMailer/src/PHPMailer.php';
+require '../../lib/PHPMailer/src/SMTP.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -68,7 +68,7 @@ try {
 
         if ($conn -> query($q3)) {
             $_SESSION["user"] = $user;
-            header("location:index.php");
+            header("location:../index.php");
             exit();
         }
     }

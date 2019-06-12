@@ -9,8 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">
 
-    <script src="cities.js"></script>
-    <script src="programe.js"></script>
+    <script src="../common/cities.js"></script>
+    <script src="../common/programe.js"></script>
 </head>
 
 <body>
@@ -116,7 +116,7 @@
                 {
                     $city = $_POST['city'];
                     $city = substr($city, 1, strlen($city)-2);
-                    
+
                     $tags = $_POST['tag'].",".$city.",".$_POST['programme'];
 
                     $sql = "INSERT INTO project VALUES('".$pid."','".$user."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['state']."','".$city."','".$_POST['programme']."','".$_POST['project']."','".$tags."','".$target_file."',0);";
@@ -226,8 +226,8 @@
                     <label>Programme</label>
                     <select onchange="print_project('programme', this.selectedIndex);" id="pro" name ="programme" class="form-control w3-input" required></select>
                 </p><br>
-                
-                <p>         
+
+                <p>
                     <label>Project</label>
                     <select id ="programme" class="form-control w3-input" name="project" required></select>
                     <script language="javascript">print_programme("pro");</script>

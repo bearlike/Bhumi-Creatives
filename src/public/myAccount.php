@@ -46,7 +46,7 @@
 				while($row = $result->fetch_assoc()){
 					$title = $row["title"];
 					$url = $row["image"];
-					echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".ucfirst($title)."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><br>";
+					echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".ucfirst($title)."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /><br>";
 
 					echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 				}
@@ -64,7 +64,7 @@
 				while($row = $result->fetch_assoc()){
 					$title = $row["title"];
 					$url = $row["image"];
-					echo "<div class='w3-btn w3-col m4 l3'><a><img name='".$title."' class='projectImgApp' id='".$row['pid']."' src='".$url."' alt='Not able to display' /><br>";
+					echo "<div class='w3-btn w3-col m4 l3'><a><img name='".$title."' class='projectImgApp' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /><br>";
 
 					echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
 				}

@@ -98,11 +98,12 @@
 										<div class="form-group">
 											<input type="text" class="form-control" name="user" placeholder="Enter Email" required><br>
 											<input type="Password" class="form-control" name="pass" placeholder="Enter Password" required><br>
-											<!-- Submit Credentials as POST-->											<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit" class="button">
+											<!-- Submit Credentials as POST-->
+											<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit" class="button">
 										</div>
 										<center>
-											<a href="forgetpass.php">Forgot Password?</a>
-											<br>Don't have an account? <a href="signup.php">SignUp</a>
+											<a href="public/forgetpass.php">Forgot Password?</a>
+											<br>Don't have an account? <a href="public/signup.php">Register</a>
 										</center>
 									</form>
 								</div>
@@ -110,7 +111,7 @@
 								<!-- Footer section -->
 								<section class="footer-section">
 									<div class="social-links-warp">
-										<p class="text-white text-center mt-2">Looking for Moderator Login?<br><a href="loginAdmin.php">Click here!</a></p>
+										<p class="text-white text-center mt-2">Looking for Moderator Login?<br><a href="admin/loginAdmin.php">Click here!</a></p>
 									</div>
 								</section>
 								<!-- Footer section end -->

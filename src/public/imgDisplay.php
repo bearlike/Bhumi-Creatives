@@ -21,7 +21,7 @@
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
                 <div class="main_img img">
-                  <img src=<?php echo $url; ?> height="530px">
+                  <img src="../../<?php echo $url; ?>" height="530px">
                 </div>
                 <div class="prod_thumbs">
                 </div>
@@ -55,8 +55,8 @@
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>
-                    <div class="buy_btn"><a href="<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
-                    <div class="buy_btn"><a href="<?php echo"download.php?pid=".$pid."&type=s"?>">Download Source</div>
+                    <div class="buy_btn"><a href="../../<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
+                    <div class="buy_btn"><a href="../../<?php echo"download.php?pid=".$pid."&type=s"?>">Download Source</div>
                   </center>
                 </div>
             </div>

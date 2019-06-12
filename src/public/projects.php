@@ -22,7 +22,7 @@
 		include 'header.php';
 		include '..//common//connection.php';
 
-    	session_start();
+    session_start();
 		if(isset($_SESSION['user']))
 			$user = $_SESSION['user'];
 		else
@@ -32,19 +32,19 @@
 		if ($result->num_rows > 0){
 			$id=0;
 			echo "<table><tr>";
-			while($row = $result->fetch_assoc()){
+			while ($row = $result->fetch_assoc()){
 				$title = $row["title"];
 				$url = $row["image"];
 				echo "<div class='w3-btn w3-col m4 l3'><div class='w3-display-container'><a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /><div class='w3-display-topright w3-padding'>";
-                $q1 = "SELECT * FROM likes WHERE pid='".$row['pid']."' AND uname='".$user."';";
-                $rs1 = $conn->query($q1);
-                $q2 = "SELECT count(uname) FROM likes WHERE pid='".$row['pid']."';";
-                $rs2 = $conn->query($q2);
-                $row2 = $rs2->fetch_assoc();
-                if($rs1->num_rows !=0)
-                    echo "<button class='button small red likebt'><a href='like.php?desid=".$row['pid']."&status=1' style='text-decoration:none'><img src='../../assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a></button></div></div><br>";
-                else
-							    echo "<button class='button small unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='../../assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
+        $q1 = "SELECT * FROM likes WHERE pid='".$row['pid']."' AND uname='".$user."';";
+        $rs1 = $conn->query($q1);
+        $q2 = "SELECT count(uname) FROM likes WHERE pid='".$row['pid']."';";
+        $rs2 = $conn->query($q2);
+        $row2 = $rs2->fetch_assoc();
+        if($rs1->num_rows !=0)
+            echo "<button class='button small red likebt'><a href='like.php?desid=".$row['pid']."&status=1' style='text-decoration:none'><img src='../../assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a></button></div></div><br>";
+        else
+				   echo "<button class='button small unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='../../assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
 
 				$maxLen = 25;
 				$tags = $row['tags'];

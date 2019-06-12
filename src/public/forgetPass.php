@@ -1,5 +1,4 @@
-<!--
-	Title: Bhmui Creatives - Forget Password Page
+<!--/	Title/ Bhmui" Creatives - Forget Password Page
 -->
 <!DOCTYPE html>
 <html>
@@ -9,13 +8,13 @@
 	<title>Forget Password</title>
 	<!-- Page Title Close-->
 	<!-- Site Icon Open-->
-	<link rel="icon" type="image/png" href="assets/img/siteicon.png">
+	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">
 	<!-- Site Icon Close-->
 	<!-- CSS Stylesheets Here -->
-	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/my-login.css">
 	<!-- Fonts Here -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<link rel="stylesheet" href="../../lib/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -24,8 +23,9 @@
 <body>
 	<div class="my-login-page">
 	<?php
-		use PHPMailer\PHPMailer\PHPMailer;
-		use PHPMailer\PHPMailer\Exception;
+		require '../../lib/PHPMailer/src/Exception.php';
+		require '../../lib/PHPMailer/src/PHPMailer.php';
+		require '../../lib/PHPMailer/src/SMTP.php';
 
 		include '../common/connection.php';
 
@@ -44,7 +44,6 @@
 			$otp = $first;
 			$_SESSION['otp'] = $otp;
 
-
 			$sql = "SELECT * FROM ulogin WHERE email ='".$email."';";
 			$result = $conn->query($sql);
 
@@ -52,47 +51,40 @@
 				if($row = $result->fetch_assoc())
 					$_SESSION['user'] = $row['uname'];
 
-				require 'PHPMailer/src/Exception.php';
-				require 'PHPMailer/src/PHPMailer.php';
-				require 'PHPMailer/src/SMTP.php';
-
 				// Instantiation and passing `true` enables exceptions
 				$mail = new PHPMailer(true);
-
 				try {
 					$sql2 = "SELECT * FROM smtp;";
 					$res2 = $conn->query($sql2);
 
 					if($row2 = $res2->fetch_assoc())
 					{
-
 						$senderMail = $row2['mail'];			//add the sender mail
-						$senderPass = $row2['password'];			//add the sender password
+						$senderPass = $row2['password'];	//add the sender password
 
 						//$mail->SMTPDebug = 4;
 						//Server settings
-						$mail->isSMTP();                                            // Set mailer to use SMTP
+						$mail->isSMTP();                    // Set mailer to use SMTP
 						$mail->Host       = $row2['host'];  // Specify main and backup SMTP servers
-						$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-						$mail->Username   = $senderMail;                     // SMTP username
-						$mail->Password   = $senderPass;                               // SMTP password
+						$mail->SMTPAuth   = true;           // Enable SMTP authentication
+						$mail->Username   = $senderMail;    // SMTP username
+						$mail->Password   = $senderPass;    // SMTP password
 						//$mail->SMTPSecure = 'ssl';
 						$mail -> SMTPOptions = array(
-            				'ssl' => array(
-                			'verify_peer' => false,
-                			'verify_peer_name' => false,
-                			'allow_self_signed' => true
-            				)
-        				);                                // Enable TLS encryption, `ssl` also accepted
-						$mail->Port       = $row2['port'];                                    // TCP port to connect to
+										            					'ssl' => array(
+										                			'verify_peer' => false,
+										                			'verify_peer_name' => false,
+										                			'allow_self_signed' => true )
+										        						);                                // Enable TLS encryption, `ssl` also accepted
+						$mail->Port = $row2['port'];          // TCP port to connect to
 
 						//Recipients
-						$mail->setFrom($senderMail, 'Creatives');
+						$mail->setFrom($senderMail,'Creatives');
 						$mail->addAddress($email);     // Add a recipient
 						$mail->addReplyTo($senderMail);
 
 					    // Content
-					    $mail->isHTML(true);                                  // Set email format to HTML
+					    $mail->isHTML(true);              // Set email format to HTML
 					    $mail->Subject = 'Reset Password';
 					    $message    = 'This mail is regarding the reset password you requested a while ago.<br>Enter the otp '.$otp.' in the browser window and then reset your Password.';
 					    $mail->Body = wordwrap($message, 70);
@@ -108,7 +100,7 @@
 				}
 			}
 			else{
-				echo "<center><h3>This E-Mail Address does not exist. Try Signing Up!!</h3></center>";
+				echo "<center><h3>This email Address does not exist. Use another email address or register for a new account.</h3></center>";
 			}
 		}
 		$conn->close();
@@ -119,7 +111,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="assets/img/logo.jpg" alt="Bhumi logo">
+						<img src="../../assets/img/logo.jpg" alt="Bhumi logo">
 					</div>
 					<div class="card fat">
 						<div class="card-body">
