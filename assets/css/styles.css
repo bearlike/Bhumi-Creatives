@@ -336,6 +336,14 @@ h2.price {
 		display: inline-block;
 }
 
+.dec_col {
+  background: #fa4c4c;
+}
+
+.approve_col {
+  background: #89fa4c;
+}
+
 
 /* Typography */
 
