@@ -5,7 +5,6 @@
 <html>
 
 <head>
-    <title>Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../lib/css/w3.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -16,6 +15,7 @@
 <?php  include 'headerAdmin.php'; ?>
 <body>
  <?php include "imgtestadmin.php"; ?>
+ <title><?php echo ucfirst ($title);?> | Projects</title>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
@@ -47,7 +47,11 @@
                         <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
-                <p><h4><b>Tags :</b><?php echo $tags; ?></h4></p><br>
+                <p><h6><b>Tags: </b><?php
+                                      foreach($p as $a) {
+                                       echo ucfirst($a).", ";
+                                      }
+                                    ?> </h6></p><br>
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>

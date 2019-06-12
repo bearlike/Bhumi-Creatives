@@ -5,18 +5,18 @@
 <html>
 
 <head>
-    <title>Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
-    <link rel="stylesheet" href="../../lib/css/w3.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-    <link rel="stylesheet" href="lib/css/luxbar.min.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/css/luxbar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 </head>
 <!-- Call header.php for Navigation Bar-->
 <?php include "header.php"; ?>
 <body>
     <?php include "imagetest.php"; ?>
+    <title><?php echo ucfirst ($title);?> | Projects</title>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
@@ -51,7 +51,11 @@
                         -<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
-                <p><h4><b>Tags :</b><?php echo $tags; ?></h4></p><br>
+                <p><h6><b>Tags: </b><?php
+                                      foreach($p as $a) {
+                                       echo ucfirst($a).", ";
+                                      }
+                                    ?> </h6></p><br>
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>

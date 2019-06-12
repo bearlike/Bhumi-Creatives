@@ -45,6 +45,13 @@
 
 				$maxLen = 25;
 				$tags = $row['tags'];
+				// Tags Normalisation
+				$tags = $row['tags'];
+				$tags = str_replace(",,","",$tags);
+				$tags = str_replace(" , ","",$tags);
+				$tags = str_replace(", ",",",$tags);
+				$tags = str_replace(" ,",",",$tags);
+				$tags = str_replace(",",", ",$tags);
 
 				if(strlen($tags) > $maxLen)
 				{

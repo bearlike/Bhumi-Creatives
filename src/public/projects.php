@@ -48,12 +48,20 @@
 
 				$maxLen = 25;
 				$tags = $row['tags'];
+				// Tags Normalisation
+				$tags = $row['tags'];
+				$tags = str_replace(",,","",$tags);
+				$tags = str_replace(" , ","",$tags);
+				$tags = str_replace(", ",",",$tags);
+				$tags = str_replace(" ,",",",$tags);
+				$tags = str_replace(",",", ",$tags);
 
 				if(strlen($tags) > $maxLen)
 				{
 					$tags = substr($tags, 0, $maxLen);
 					$tags = $tags."...";
 				}
+
 				echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$tags."</center></a></div>";
 			}
 		}

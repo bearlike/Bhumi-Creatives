@@ -14,8 +14,15 @@ if ($row = $result -> fetch_assoc()) {
     $url = $row['image'];
     $title = $row['title'];
     $doneby = $row['uname'];
-    $desc = $row['descri'];
+    $desc = ucfirst($row['descri']);
+    // Tags Normalisation
     $tags = $row['tags'];
+    $tags = str_replace(",,","",$tags);
+    $tags = str_replace(" , ","",$tags);
+    $tags = str_replace(", ",",",$tags);
+    $tags = str_replace(" ,",",",$tags);
+    $tags = str_replace(",",", ",$tags);
+    $p = (explode(", ",$tags));
     $downloads = $row["downloads"];
 }
 $q1 = "select count(uname) from likes where pid='".$row['pid']."';";
