@@ -31,14 +31,14 @@
                 </h1>
                 <p class="prod_sub_title">
                     <?php echo ucfirst($doneby);?>
-                </p>
+                </p><br>
 
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
                         <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
-
+                <p><h4><b>Tags :</b><?php echo $tags; ?></h4></p><br>
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>
