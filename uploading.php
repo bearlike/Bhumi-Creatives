@@ -168,7 +168,7 @@
         <p>
             <label>City</label>
 								<!--Popular Cities within India-->
-                <select class="w3-input" name="cars">
+                <select class="w3-input" name="city">
 	                <option value="Agra">Agra</option>
 	                <option value="Ahmedabad">Ahmedabad</option>
 	                <option value="Alappuzha">Alappuzha</option>
@@ -218,11 +218,16 @@
 	                <option value="Visakhapatnam">Visakhapatnam</option>
                 </select>
         </p><br>
-        <p>
-            <label>Cause</label>
-            <input class="w3-input" type="text" name='cause' required />
-            (Eg - RTE)
-        </p><br>
+				<p>
+						<label>Programme</label>
+								<!--programme-->
+								<select class="w3-input" name="cause">
+									<option value="cat">Catalyse</option>
+									<option value="ign">Ignite</option>
+									<option value="ref">Refresh</option>
+									<option value="gen">General</option>
+								</select>
+				</p><br>
         <p>
             <label>Tags</label>
             <input class="w3-input" type="text" name='tag' required />
