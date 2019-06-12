@@ -43,7 +43,16 @@
 				$url = $row["image"];
 				echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='".$url."' alt='Unable to display' /><br>";
 
-				echo "<center><b>".ucfirst($title)."<br>Tags</b>: ".$row['tags']."<br>";
+				$maxLen = 25;
+				$tags = $row['tags'];
+				
+				if(strlen($tags) > $maxLen)
+				{
+					$tags = substr($tags, 0, $maxLen);
+					$tags = $tags."...";
+				}
+
+				echo "<center><b>".ucfirst($title)."<br>Tags</b>: ".$tags."<br>";
 				echo "<form method='post' action='delete.php?pid=".$row['pid']."'><input class='red button' type='submit' name='delete' value='Delete'></form></center></a></div>";
 			}
 		}

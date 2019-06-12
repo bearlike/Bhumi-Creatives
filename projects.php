@@ -50,7 +50,15 @@
                 else
 							    echo "<button class='button small unlikebt' ><a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."</a></button></div></div><br>";
 
-				echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
+				$maxLen = 25;
+				$tags = $row['tags'];
+				
+				if(strlen($tags) > $maxLen)
+				{
+					$tags = substr($tags, 0, $maxLen);
+					$tags = $tags."...";
+				}
+				echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$tags."</center></a></div>";
 			}
 		}
 		else{
