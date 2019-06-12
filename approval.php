@@ -36,7 +36,7 @@
         { $id=0;
           echo "<tr></tr>";
         }
-				echo "<div ><table><tr><td><img name='".$title."' class='projectImg' id='".$url."' src='".$url."' alt='Not able to display' />";
+				echo "<div ><table><tr><td><a onclick='redir()' style='cursor:zoom-in'><img name='".$title."' class='projectImg' id='".$url."' src='".$url."' alt='Not able to display' /></a>";
 				echo "<br><b>Title: </b>".ucfirst($title)."<br><b>Tags: </b>".$row['tags']."</td>";
 				echo "
 									<td>
@@ -54,6 +54,11 @@
 		}
 		$conn->close();
 	?>
+	<script type='text/javascript'>
+		function redir() {
+			window.open('approvedisplay.php?pid='+event.srcElement.id,'_self');
+		}
+	</script>
 
 	<!-- Call footer.php for Footer Bar-->
 	<!--Footer to be added-->
