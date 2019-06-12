@@ -296,5 +296,6 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"uploadYour","qid":"1","text":"Uploa
   </div>
   <input type="hidden" id="input_6" name="q6_uniqueid" class="form-hidden" value="3" data-component="autoincrement" />
 </form></body>
+<?php include "..\\footer.php"; ?>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
