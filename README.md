@@ -12,5 +12,12 @@ This project is licensed under the terms of the [MIT license](LICENSE) and is av
 -   [Testing Website](http://about:blank)
 -   [Issue tracker](https://github.com/KrishnaAlagiri/Bhumi-Creatives/issues)
 
+## Authors
+* **Krishna Alagiri** - [KrishnaAlagiri](https://github.com/KrishnaAlagiri/)
+* **Vignesh Shankar** - [Vignesh0404](https://github.com/Vignesh0404/)
+* **Suraj GSN** - [Suraj](https://github.com/gsnvsuraj/)
+* **Mahesh NV** - [Mahesh](https://github.com/MAHESH-N-V/)
+
+
 ## <br>
 This readme was written with ❤️
