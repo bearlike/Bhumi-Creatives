@@ -8,6 +8,9 @@
 	<link rel="icon" type="image/png" href="assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+
+    <script src="cities.js"></script>
+    <script src="programe.js"></script>
 </head>
 
 <body>
@@ -111,9 +114,12 @@
             {
                 if (move_uploaded_file($_FILES["source"]["tmp_name"], $target_file))
                 {
-                    $tags = $_POST['tag'].",".$_POST['city'].",".$_POST['cause'];
+                    $city = $_POST['city'];
+                    $city = substr($city, 1, strlen($city)-2);
+                    
+                    $tags = $_POST['tag'].",".$city.",".$_POST['programme'];
 
-                    $sql = "INSERT INTO project VALUES('".$pid."','".$user."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['city']."','".$_POST['cause']."','".$tags."','".$target_file."',0);";
+                    $sql = "INSERT INTO project VALUES('".$pid."','".$user."','".$_POST['name']."','".$target_file_img."','".$_POST['descri']."','".$_POST['state']."','".$city."','".$_POST['programme']."','".$_POST['project']."','".$tags."','".$target_file."',0);";
                     $result = $conn->query($sql) or die(mysqli_error($conn));
                     header('location:projectsAdmin.php');
                     exit();
@@ -151,9 +157,9 @@
             (Maximum 250 Characters allowed)
         </p><br>
 
-        <p>
+        <!--<p>
             <label>City</label>
-								<!--Popular Cities within India-->
+								Popular Cities within India
                 <select class="w3-input" name="city">
 	                <option value="Agra">Agra</option>
 	                <option value="Ahmedabad">Ahmedabad</option>
@@ -203,17 +209,29 @@
 	                <option value="Vijayawada">Vijayawada</option>
 	                <option value="Visakhapatnam">Visakhapatnam</option>
                 </select>
-        </p><br>
+        </p><br>-->
 				<p>
-						<label>Programme</label>
-								<!--programme-->
-								<select class="w3-input" name="cause">
-									<option value="cat">Catalyse</option>
-									<option value="ign">Ignite</option>
-									<option value="ref">Refresh</option>
-									<option value="gen">General</option>
-								</select>
-				</p><br>
+                    <label>State </label>
+                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="state" class="w3-input" required></select>
+                </p><br>
+
+                <p>
+                    <label>City</label>
+                    <select id ="state" class="form-control w3-input" name="city" required></select>
+                    <script language="javascript">print_state("sts");</script>
+
+                </p><br>
+
+                <p>
+                    <label>Programme</label>
+                    <select onchange="print_project('programme', this.selectedIndex);" id="pro" name ="programme" class="form-control w3-input" required></select>
+                </p><br>
+                
+                <p>         
+                    <label>Project</label>
+                    <select id ="programme" class="form-control w3-input" name="project" required></select>
+                    <script language="javascript">print_programme("pro");</script>
+                </p><br>
         <p>
             <label>Tags</label>
             <input class="w3-input" type="text" name='tag' required />
