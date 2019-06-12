@@ -76,7 +76,14 @@
 						$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
 						$mail->Username   = $senderMail;                     // SMTP username
 						$mail->Password   = $senderPass;                               // SMTP password
-						//$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
+						//$mail->SMTPSecure = 'ssl';
+						$mail -> SMTPOptions = array(
+            				'ssl' => array(
+                			'verify_peer' => false,
+                			'verify_peer_name' => false,
+                			'allow_self_signed' => true
+            				)
+        				);                                // Enable TLS encryption, `ssl` also accepted
 						$mail->Port       = $row2['port'];                                    // TCP port to connect to
 
 						//Recipients
