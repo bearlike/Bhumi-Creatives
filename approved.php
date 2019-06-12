@@ -50,7 +50,7 @@
         $query2="INSERT INTO notification VALUES('".$row2['user']."','".$row2['title']." has been approved',CURDATE(),'unread');";
         $conn->query($query2);
 
-        $query4="INSERT INTO project VALUES('".$pid."','".$row2['user']."','".$row2['title']."','".$row2['image']."','".$row2['descri']."','".$row2['city']."','".$row2['cause']."','".$row2['tags']."','".$row2['source_file']."',0) ;";
+        $query4="INSERT INTO project VALUES('".$pid."','".$row2['user']."','".$row2['title']."','".$row2['image']."','".$row2['descri']."','".$row2['state']."','".$row2['city']."','".$row2['programme']."','".$row2['project']."','".$row2['tags']."','".$row2['source_file']."',0) ;";
         $conn->query($query4);
 
         $query5="DELETE FROM approval WHERE pid='".$pid."';";
