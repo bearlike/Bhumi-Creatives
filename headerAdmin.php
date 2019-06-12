@@ -33,7 +33,7 @@
 				  </a>
 				</li>
 				<li class="luxbar-item"><a href="notificationAdmin.php">Notifications</a></li>
-	      <li class="luxbar-item"><a href="logout.php">Sign Out</a></li>
+	      <li class="luxbar-item"><a href="logout.php">Logout</a></li>
 	    </ul>
 	  </div>
 </header>
