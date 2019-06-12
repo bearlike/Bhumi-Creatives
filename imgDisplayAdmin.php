@@ -41,12 +41,13 @@
                     <h4 class="price">
                         <?php echo $downloads; ?>
                          <b>Downloads</b></h4>
-                </div>
+                </div><br>
                 <!--<div class="desc_wrapper">
                     <ul class="desc_points">
                         <!<li class="desc_point"></*?php echo $desc ?*/></li>-->
                   <!--  </ul>
                 </div>-->
+                <p><h4><b>Tags :</b><?php echo $tags; ?></h4></p><br>
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>
