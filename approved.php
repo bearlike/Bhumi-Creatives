@@ -70,7 +70,7 @@
         { $id=0;
           echo "<tr></tr>";
         }
-				echo "<td><img name='".$title."' class='projectImg' id='".$url."' src='".$url."' alt='Not able to display' />";
+				echo "<td><a onclick='redir()' style='cursor:zoom-in'><img name='".$title."' class='projectImg' id='".$url."' src='".$url."' alt='Not able to display' /></a>";
 				echo "<br><center>".$title."<br>TAGS:".$row['tags']."</center></td>";
                 echo "<td><button><a class='but' href='approved.php?pid=".$row['pid']."&stat=A'>APPROVE</a></button><button><a class='but' href='approved.php?pid=".$row['pid']."&stat=D'>DECLINE</a></button><div></td>";
                 $id=$id+1;
@@ -81,6 +81,12 @@
 		}
         $conn->close();
 	?>
+
+    <script type='text/javascript'>
+		function redir() {
+			window.open('approvedisplay.php?pid='+event.srcElement.id,'_self');
+		}
+	</script>
 
 	<!-- Call footer.php for Footer Bar-->
 	<!--Footer to be added-->
