@@ -337,11 +337,25 @@ h2.price {
 }
 
 .dec_col {
-  background: #fa4c4c;
+  background: #b82424;
+  color: #fefefe;
+  padding: .6em 1em;
+  text-align: center;
+  max-width: 260px;
+  width: 100%;
+  margin-top: 1em;
+  display: inline-block;
 }
 
 .approve_col {
-  background: #89fa4c;
+  background: #5ebd2a;
+  color: #fefefe;
+  padding: .6em 1em;
+  text-align: center;
+  max-width: 260px;
+  width: 100%;
+  margin-top: 1em;
+  display: inline-block;
 }
 
 
