@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <title>You're being Redirected.....</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="Krishnakanth Alagiri">
+  <meta name="author" content="Suraj,Mahesh,Vignesh,Krishnakanth">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
   <!--<meta http-equiv="refresh" content="0"; url="src/index.php" />-->
