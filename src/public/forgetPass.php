@@ -32,7 +32,7 @@
 
 		include '../common/connection.php';
 
-		session_start();
+		/*session_start();*/
 
 		if (isset($_POST['subEmail'])) {
 			$email = mysqli_real_escape_string($conn, $_POST['emailID']);

@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="../../lib/css/luxbar.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../lib/materialize/css/materialize.css">
+    <!-- Import all neccessary fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 <!-- Call header.php for Navigation Bar-->
 <?php include "header.php"; ?>

@@ -37,14 +37,14 @@
 				/*Name of the Database*/
 		    $dbname = "uplabs";
 		    /*Create connection*/
-		    session_start();
+		    
 		    $conn = new mysqli($servername, $username, $password, $dbname);
 		    /*Check connection*/
 		    if ($conn->connect_error) {
 		        die("Connection failed: " . $conn->connect_error);
 		    }
 		    /*echo "Connected successfully";
-		    session_start();*/
+		    */
 		    $sql = "SELECT * FROM admin";
 		    $result = $conn->query($sql);
 		    $user = $_POST["user"];

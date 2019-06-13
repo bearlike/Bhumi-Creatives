@@ -2,7 +2,7 @@
 <?php
 include '../common/connection.php';
 
-session_start();
+/*session_start();*/
 
 $desid = $_GET['desid'];
 $uid = $_SESSION["user"];

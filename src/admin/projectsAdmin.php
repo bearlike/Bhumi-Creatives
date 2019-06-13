@@ -1,33 +1,93 @@
 <!--
 	Title: Bhmui Creatives - Project Home Page for Moderators
 -->
+<?php
+	include '..//common//connection.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Projects Admin | Bhumi</title>
-	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../../lib/css/luxbar.min.css">
- 	<link rel="stylesheet" type="text/css" href="../../lib/css/w3.css">
- 	<link rel="stylesheet" type="text/css" href="../../lib/textbox-css/textbox.css">
-	<link rel="stylesheet" type="text/css" href="../../lib/buttons/material-circle.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/projects.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/display.css">
- 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
+	<!-- Import all neccessary Stylesheets (from Lib) -->
+	<link rel="stylesheet" type="text/css" href="../../lib/textbox-css/textbox.css">
 	<link rel="stylesheet" type="text/css" href="../../lib/buttons/gradient.css">
 	<link rel="stylesheet" type="text/css" href="../../lib/font-awesome/4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/materialize/css/materialize.css">
+	<!-- Import all neccessary Stylesheets -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/projects.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/display.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/category-bar.css">
+	<!-- Import all neccessary fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<!--Custom Styles-->
+	<style>
+		body a {
+			color: none;
+			color: #000;
+		}
+	</style>
 </head>
 
 <!-- Body Opens -->
-<body class="grey">
+<body>
+	<?php include 'headerAdmin.php';?>
+	<!-- Too Lazy for Padding -->
+	<br>
+	<!-- Heading #1 -->
+	<div class="posts-group__header">
+		<h3> Browse Here </h3>
+		<span class="note">
+			Filter quality downloads for your next project by softwares
+		</span>
+	</div>
+	<!--Navigation by tools used-->
+	<ul class="tools-navigation-items">
+		<!-- aftereffects Icon-->
+		<li class="tools-nativation-item">
+			<a href="/posts/tool/aftereffects">
+				<img src="../../assets/img/tools/aftereffects.png" class="shadow">
+			</a>
+		</li>
+		<!-- illustrator Icon-->
+		<li class="tools-nativation-item">
+			<a href="/posts/tool/illustrator">
+				<img src="../../assets/img/tools/illustrator.png" class="shadow">
+			</a>
+		</li>
+		<!-- xd Icon-->
+		<li class="tools-nativation-item">
+			<a href="/posts/tool/xd">
+				<img src="../../assets/img/tools/xd.png" class="shadow">
+			</a>
+		</li>
+		<!-- html Icon-->
+		<li class="tools-nativation-item">
+			<a href="/posts/tool/html">
+				<img src="../../assets/img/tools/html.png" class="shadow">
+			</a>
+		</li>
+		<!-- wordpress Icon-->
+		<li class="tools-nativation-item">
+			<a href="/posts/tool/sketch">
+				<img src="../../assets/img/tools/wordpress.png" class="shadow">
+			</a>
+		</li>
+	</ul>
+
+	<br>
+	<!-- Heading #2 -->
+	<div class="posts-group__header">
+		<h3> Latest Uploads </h3>
+		<span class="note">
+			Find high-quality design resources uploaded by the community here
+		</span>
+	</div>
+
 	<!-- PHP Open -->
 	<?php
-		include 'headerAdmin.php';
-		include '../common/connection.php';
-
-		session_start();
-
 		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
 			$user = $_SESSION['user'];
 		else
