@@ -7,7 +7,7 @@ session_start();
 if (isset($_SESSION['user']))
     $user = $_SESSION['user'];
 else
-    header("Location:index.php");
+    header("Location:../index.php");
 
 $user = $_SESSION['user'];
 $pid = $_GET['pid'];

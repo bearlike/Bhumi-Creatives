@@ -18,7 +18,7 @@
 		if(isset($_SESSION['otp']))
 			$otp = $_SESSION['otp'];
 		else
-			header("Location:index.php");
+			header("Location:../index.php");
 
 		if(isset($_POST['subOtp']))
 		{

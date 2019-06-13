@@ -18,7 +18,7 @@
 		if(isset($_SESSION['user']))
 			$user = $_SESSION['user'];
 		else
-			header("Location:index.php");
+			header("Location:../index.php");
 		$sql = "SELECT * FROM notification WHERE uname='".$user."';";
 		$result = $conn->query($sql) or die($conn->error);
 		if ($result->num_rows > 0){
