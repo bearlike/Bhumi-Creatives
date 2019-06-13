@@ -9,8 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">
 
-	<script src="cities.js"></script>
-    <script src="programe.js"></script>
+	<script src="../common/cities.js"></script>
+    <script src="../common/programe.js"></script>
 </head>
 
 <body>
