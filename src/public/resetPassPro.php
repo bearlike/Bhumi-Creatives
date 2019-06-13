@@ -67,8 +67,15 @@
 									<input class="form-control" type="password" name="pass" placeholder="Enter Password" required/><br>
 									<input class="form-control" type="password" name="conPass" placeholder="Enter New Password Again" required/><br><br>
 									<input type="submit" name="subPass" value="Change Password"class="btn btn-primary btn-block" />
-								</form>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	</center>
+</div>
 
 </body>
 </html>
