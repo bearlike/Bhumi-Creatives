@@ -91,7 +91,11 @@
 			while ($row = $result->fetch_assoc()){
 				$title = $row["title"];
 				$url = $row["image"];
-				echo "<div class='w3-btn w3-col m4 l3'><div class='w3-display-container'><a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /><div class='w3-display-topright w3-padding'>";
+				echo "
+				<div class='w3-btn w3-col m4 l3'>
+					<div class='w3-display-container hover01'>
+						<a onclick='redir()'><figure><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /></figure>
+						<div class='w3-display-topright w3-padding'>";
         $q1 = "SELECT * FROM likes WHERE pid='".$row['pid']."' AND uname='".$user."';";
         $rs1 = $conn->query($q1);
         $q2 = "SELECT count(uname) FROM likes WHERE pid='".$row['pid']."';";
