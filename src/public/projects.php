@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Projects | Bhumi</title>
+	<title>Projects | Bhumi Creatives</title>
 	<!-- Import all neccessary Stylesheets -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">

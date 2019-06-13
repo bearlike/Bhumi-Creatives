@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Approvals</title>
+	<title>Approvals | Bhumi Creatives</title>
   <link rel="stylesheet" href="../../assets/css/gen/approval.css">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
@@ -15,7 +15,7 @@
   	include 'headerAdmin.php';
 		include '../common/connection.php';
 
-    
+
 
     if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
         $user = $_SESSION['user'];

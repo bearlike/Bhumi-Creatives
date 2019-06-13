@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Projects</title>
+	<title>My Projects | Bhumi Creatives</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
  	<link rel="stylesheet" type="text/css" href="../../assets/css/myProjects.css">

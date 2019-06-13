@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reset Password</title>
+	<title>Reset Password | Bhumi Creatives</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<!-- CSS Stylesheets Here -->

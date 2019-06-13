@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<!-- Page Title Open-->
-		<title>User | Login</title>
+		<title>Register | Bhumi Creatives</title>
 		<!-- Page Title Close-->
 		<!-- Site Icon Open-->
 		<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">

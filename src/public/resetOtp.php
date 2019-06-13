@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reset OTP</title>
+	<title>Reset OTP | Bhumi Creatives</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">

@@ -15,7 +15,7 @@
 <?php  include 'headerAdmin.php'; ?>
 <body>
  <?php include "imgtestadmin.php"; ?>
- <title><?php echo ucfirst ($title);?> | Projects</title>
+ <title><?php echo ucfirst ($title);?> | Bhumi Creatives</title>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">

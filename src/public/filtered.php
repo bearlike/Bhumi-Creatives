@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search Results</title>
+	<title>Search Results | Bhumi Creatives</title>
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/display.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/gen/projects.css">

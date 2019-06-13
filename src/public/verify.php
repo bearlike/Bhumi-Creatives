@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Account Verified</title>
+	<title>Account Verified | Bhumi Creatives</title>
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 </head>
 <body>

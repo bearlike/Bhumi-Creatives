@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>All Notifications</title>
+	<title>All Notifications | Bhumi Creatives</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
@@ -14,7 +14,7 @@
 	<?php
 		include 'headerAdmin.php';
 		include '../common/connection.php';
-		
+
 		if(isset($_SESSION['user']) && $_SESSION['user'] == "admin")
 			$user = $_SESSION['user'];
 		else

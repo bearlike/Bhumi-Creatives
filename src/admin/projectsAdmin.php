@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Projects Admin | Bhumi</title>
+	<title>Projects Admin | Bhumi Creatives</title>
 	<!-- Import all neccessary Stylesheets (from Lib) -->
 	<link rel="stylesheet" type="text/css" href="../../lib/textbox-css/textbox.css">
 	<link rel="stylesheet" type="text/css" href="../../lib/buttons/gradient.css">

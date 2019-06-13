@@ -5,7 +5,7 @@
 <!-- Head Open -->
 <head>
 	<!-- Page Title Open-->
-	<title>Forget Password</title>
+	<title>Forget Password | Bhumi Creatives</title>
 	<!-- Page Title Close-->
 	<!-- Site Icon Open-->
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png">
@@ -25,7 +25,7 @@
 	<?php
 		use PHPMailer\ PHPMailer\ PHPMailer;
 		use PHPMailer\ PHPMailer\ Exception;
-		
+
 		require '../../lib/PHPMailer/src/Exception.php';
 		require '../../lib/PHPMailer/src/PHPMailer.php';
 		require '../../lib/PHPMailer/src/SMTP.php';

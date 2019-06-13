@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Notification</title>
+	<title>Notification | Bhumi Creatives</title>
  	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css"/>
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 </head>

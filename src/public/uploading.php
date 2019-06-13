@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Upload</title>
+	<title>Upload | Bhumi Creatives</title>
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">

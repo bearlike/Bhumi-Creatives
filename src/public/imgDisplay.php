@@ -20,7 +20,7 @@
 <?php include "header.php"; ?>
 <body>
     <?php include "imagetest.php"; ?>
-    <title><?php echo ucfirst ($title);?> | Projects</title>
+    <title><?php echo ucfirst ($title);?> | Bhumi Creatives</title>
     <div class="content">
         <div class="content_wrapper clearfix">
             <div class="cnt_left">
