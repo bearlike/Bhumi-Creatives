@@ -23,6 +23,9 @@
 <body>
 	<div class="my-login-page">
 	<?php
+		use PHPMailer\ PHPMailer\ PHPMailer;
+		use PHPMailer\ PHPMailer\ Exception;
+		
 		require '../../lib/PHPMailer/src/Exception.php';
 		require '../../lib/PHPMailer/src/PHPMailer.php';
 		require '../../lib/PHPMailer/src/SMTP.php';
