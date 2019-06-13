@@ -8,10 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
 	<!-- CSS Stylesheets Here -->
-	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/my-login.css">
 	<link rel="stylesheet" href="../../lib/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Fonts Here -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -25,7 +25,7 @@
 		if(isset($_SESSION['user']))
 			$user = $_SESSION['user'];
 		else
-			header("Location:index.php");
+			header("Location:../index.php");
 
 		if(isset($_POST['subPass']))
 		{
@@ -58,11 +58,11 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="assets/img/logo.jpg" alt="Bhumi logo">
+						<img src="../../assets/img/logo.jpg" alt="Bhumi logo">
 					</div>
 					<div class="card fat">
 						<div class="card-body">
-							<form action="loginAdmin.php" method="POST">
+							<form action="../admin/loginAdmin.php" method="POST">
 								<h4 class="card-title">Reset Password</h4>
 									<input class="form-control" type="password" name="pass" placeholder="Enter Password" required/><br>
 									<input class="form-control" type="password" name="conPass" placeholder="Enter New Password Again" required/><br><br>
