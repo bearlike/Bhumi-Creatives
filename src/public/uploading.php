@@ -7,8 +7,8 @@
 	<title>Upload</title>
 
 
-	<script src="cities.js"></script>
-    <script src="programe.js"></script>
+	<script src="../common/cities.js"></script>
+    <script src="../common/programe.js"></script>
 
 </head>
 
@@ -215,7 +215,7 @@
 		<div>Allowed formats are ZIP,RAR,TAR and PSD</div>
 		</div>
 		
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-primary">Upload</button>
 		</form>
 		</div>
 		</div>
