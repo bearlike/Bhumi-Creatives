@@ -148,65 +148,75 @@
 					$conn -> close();
 			}
 		?>
+		
+		<!-- jumbotron -->
+
+		<div class='container-fluid p-3 '>
+			<div class="jumbotron jumbotron-fluid">
+					<div class="container">
+					  <h1 class="display-4"><center>Upload form</center></h1>
+					  <p class="lead"><center>Share your creative content with the whole of Bhumi!</center></p>
+					</div>
+				  </div>
 
 
+
+		<!-- jumbotron -->
 
 		<!--form -->
 		<div class="container-fluid">
 		<div class="row justify-content-md-center">
 		<div class="col-md-8 border p-4">
 		<form method='post' action='uploading.php' enctype="multipart/form-data">
-		<div class="row justify-content-md-center">
-		<h2><strong>Upload Form</strong></h2>
-		</div>
+		
 
 		<div class="form-group">
-   		 <label for="file">Export Image</label>
-   		 <input type="file" class="form-control-file" id="file" name='file' required>
+   		 <label for="file"><b>Export Image</b></label>
+   		 <input type="file" class="w3-input" id="file" name='file' required>
 			<div style="color:red;">* File size must be < 5MB </div>
 			<div>Allowed formats are JPEG, JPG, PNG and GIF</div>
  		 </div>
 	  
 		<div class="form-group">
-			<label>Project/Design Name</label>
+			<label><b>Project/Design Name</b></label>
 		  <input class="form-control" type="text" name='name' required>
 		</div>
 		<div class="form-group">
-			<label>Description</label>
+			<label><b>Description</b></label>
 		  <input class="form-control" type="text" name='descri' maxlength="250" required>
 		  <div>(Maximum 250 Characters allowed)</div>
 		</div>
 
 		<div class="form-group">
-		<label>State </label>
+		<label><b>State </b></label>
 		<select onchange="print_city('state', this.selectedIndex);" id="sts" name="state" class="form-control" required></select>
 		</div>
 
 		<div class="form-group">
-		<label>City</label>
+		<label><b>City</b></label>
 		<select id ="state" class="form-control " name="city" required></select>
 		<script language="javascript">print_state("sts");</script>
 		</div> 
 
 		<div class="form-group">
-		<label>Programme</label>
+		<label><b>Programme</b></label>
 		<select onchange="print_project('programme', this.selectedIndex);" id="pro" name ="programme" class="form-control" required></select>
 		</div> 
 		
 		<div class="form-group">
-		<label>Project</label>
+		<label><b>Project</b></label>
 		<select id ="programme" class="form-control " name="project" required></select>
 		<script language="javascript">print_programme("pro");</script>
 		</div> 
 
 		<div class="form-group">
-		<label>Tags</label>
+		<label><b>Tags</b></label>
         <input class="form-control" type="text" name='tag' required />
         <div> (Separate different tags using commas)</div>
 		</div> 
 
 		<div class="form-group">
-		<label>Source File</label>
+		<label><b>Source File</b></label>
         <input class="w3-input" type="file" name='source' required />
 		<div style="color:red;">* File size must be < 50MB </div>
 		<div>Allowed formats are ZIP,RAR,TAR and PSD</div>
@@ -214,6 +224,7 @@
 		
 		<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
+		</div>
 		</div>
 		</div>
 		</div>

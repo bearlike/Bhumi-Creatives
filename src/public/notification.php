@@ -20,7 +20,14 @@
 	session_start();
 		include 'header.php';
 		include '../common/connection.php';
-	
+	?>
+<div class='container-fluid p-3 '>
+			<div class="jumbotron jumbotron-fluid">
+					<div class="container">
+					  <h1 class="display-4"><center>Notifications</center></h1>
+					</div>
+				  </div>
+	<?php
 		if(isset($_SESSION['user']))
 			$user = $_SESSION['user'];
 		else
@@ -28,7 +35,6 @@
 		$sql = "SELECT * FROM notification WHERE uname='".$user."';";
 		$result = $conn->query($sql) or die($conn->error);
 		if ($result->num_rows > 0){
-			echo "<div class='row justify-content-md-center'><div class='col-md-8 m-2 '><div class='card'> <div class='card-body '><h2><strong>Notifications</strong><h2></div></div></div></div>";
 			while($row = $result->fetch_assoc()){
 				$message = $row['message'];
 				$dates = $row['dateCheck'];

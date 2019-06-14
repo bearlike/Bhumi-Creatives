@@ -29,7 +29,14 @@
 	session_start();
 		include 'header.php';
 		include '../common/connection.php';
+?>
+	<div class="container-fluid">
+		<div class="row p-3 justify-content-md-center">
+		<a href='resetPassPro.php' ><button type="button" class="btn btn-success btn-lg">Reset Password</button></a>
+		</div>
+		<div class="row">
 
+<?php
 		
 
 		if(isset($_SESSION['user']))
@@ -40,21 +47,29 @@
 		if ( isset($_SESSION['msg']) )
 		{
 	    	echo "<div class='w3-panel w3-green w3-card-4 w3-display-container w3-margin'>
-	    		<span onclick=\"this.parentElement.style.display='none'\"
-				class='w3-button w3-display-topright'>&times;</span>
+	    		<span onclick=\"this.parentElement.style.display='none'\" class='w3-button w3-display-topright'>&times;</span>
 	    		<h3>Success!</h3>
 	  			<p>".$_SESSION['msg']."</p>
 				</div>";
 			unset($_SESSION['msg']);
 		}
-		echo "<p><a href='resetPassPro.php' style='float:right'><button class='blue button'>Reset Password</button></a></p>";
+		?>
 
+		</div>
+		<div class="row">
+
+		<?php
 		$sql = "SELECT * FROM project WHERE uname='".$user."';";
 		$result = $conn->query($sql);
 
 			if ($result->num_rows > 0){
 	              $id=0;
-				echo "<h2 class='w3-container'>Approved Projects</h2>";
+				echo "<div class='container-fluid p-3 '>
+				<div class='jumbotron jumbotron-fluid'>
+						<div class='container'>
+						  <h1 class='display-4'><center>Your approved projects</center></h1>
+						</div>
+					  </div>";
 				while($row = $result->fetch_assoc()){
 					$title = $row["title"];
 					$url = $row["image"];
@@ -94,7 +109,9 @@
 	</script>
 	<!-- Call footer.php for Footer Bar-->
 	<!--Footer to be added-->
-    <?php include "..//common//footer.php"; ?>
+	</div>
+	</div>
+	<?php include "..//common//footer.php"; ?>
 
 </body>
 </html>
