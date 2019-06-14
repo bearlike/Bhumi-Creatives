@@ -46,6 +46,7 @@
 							echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."<br>";
 							echo "<form method='post' action='delete.php?pid=".$row['pid']."'><input class='button red' type='submit' name='delete' value='Delete'></form></center></a></div>";
               $flag = 1;
+              $found = 1;
               break;
             }
           }
@@ -54,6 +55,8 @@
 	      }
 
       }
+      if( $found == 0 )
+            	echo "<center><h4>There's no result for the filter tags. Try something else :)</h4></center>";
 		}
 		else{
 			echo "<h3>No Projects to Display.</h3>";
