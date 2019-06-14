@@ -108,15 +108,15 @@
 	<!-- PHP Close -->
 	<section class="h-100">
 		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
+			<div class="row justify-content-md-center p-3 h-100">
 				<div class="card-wrapper">
-					<div class="brand">
-						<img src="../../assets/img/logo.jpg" alt="Bhumi logo">
-					</div>
+				<div class="row justify-content-md-center">
+							<img src="../../assets/img/logo.jpg" alt="Bhumi logo" class="rounded mx-auto d-block" style="width: 20%; height: auto">
+						</div>
 					<div class="card fat">
 						<div class="card-body">
 							<form action="forgetPass.php" method="post">
-								<h4 class="card-title">Forget Password</h4>
+								<center><h4 class="card-title">Forget Password</h4></center>
 								<div class="form-group">
 								<input type="email" class="form-control" name="emailID" placeholder="Enter Email" required/><br>
 								<input type="submit" name="subEmail" value="Submit" class="btn btn-primary btn-block" class="button" />

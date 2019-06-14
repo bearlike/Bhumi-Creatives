@@ -6,6 +6,7 @@
 <head>
 	<title>Reset Password</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
@@ -44,6 +45,9 @@
 			$conn->close();
 		}
 		?>
+		<div class="container-fluid">
+		blah
+		</div>
 	<!-- PHP Close -->
 	<section class="h-100">
 		<div class="container h-100">

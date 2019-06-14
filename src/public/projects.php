@@ -66,7 +66,7 @@
 				$url = $row["image"];
 				echo "<div class='w3-btn w3-col m4 l3 '>
 					<div class='card w3-display-container'>
-						<a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' />
+						<a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Unable to display' />
 							<div class='w3-display-topright w3-padding'>";
 	   
 		
@@ -79,8 +79,8 @@
         $rs2 = $conn->query($q2);
         $row2 = $rs2->fetch_assoc();
         if($rs1->num_rows !=0)
-            echo "<button class='button small red likebt'>
-				<a href='like.php?desid=".$row['pid']."&status=1' style='text-decoration:none'><img src='../../assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a>
+            echo "<button class='btn btn-danger  '>
+				<a href='like.php?desid=".$row['pid']."&status=1' style='color: white; text-decoration:none'><img src='../../assets/images/liked.png' class='likes'> ".$row2['count(uname)']."</a>
 			</button>
 		</div>
 	</div>
@@ -90,8 +90,8 @@
 		
 		
 			else
-				   echo "<button class='button small unlikebt' >
-					   <a href='like.php?desid=".$row['pid']."&status=0' style='text-decoration:none'><img src='../../assets/images/unlike.gif' class='likes changeImg'> ".$row2['count(uname)']."
+				   echo "<button class='btn btn-success unlikebt' >
+					   <a href='like.php?desid=".$row['pid']."&status=0' style='color: white; text-decoration:none'><img src='../../assets/images/liked.png' class='likes changeImg'> ".$row2['count(uname)']."
 					</a></button></div></div><br>";
 
 				$maxLen = 25;

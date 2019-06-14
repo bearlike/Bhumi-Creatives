@@ -9,6 +9,7 @@
 
  	<link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css"/>
 	<link rel="icon" type="image/png" href="../../assets/img/siteicon.png" />
+	
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 		include '../common/connection.php';
 	?>
 <div class='container-fluid p-3 '>
-			<div class="jumbotron jumbotron-fluid">
+			<div class="jumbotron jumbotron-fluid p-2">
 					<div class="container">
 					  <h1 class="display-4"><center>Notifications</center></h1>
 					</div>

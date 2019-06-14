@@ -31,8 +31,15 @@
 		include '../common/connection.php';
 ?>
 	<div class="container-fluid">
-		<div class="row p-3 justify-content-md-center">
-		<a href='resetPassPro.php' ><button type="button" class="btn btn-success btn-lg">Reset Password</button></a>
+		<div class="row p-3  justify-content-md-center">
+		
+		<div class="card col-md-4 p-1 ">
+		<div class='card-body'>
+		<center><h3>Want to change your password?</h3></center>
+		<center><a href='resetPassPro.php' ><button type="button" class="btn btn-primary btn-lg">Reset Password</button></a></center>
+		</div>
+
+		</div>
 		</div>
 		<div class="row">
 
@@ -65,9 +72,9 @@
 			if ($result->num_rows > 0){
 	              $id=0;
 				echo "<div class='container-fluid p-3 '>
-				<div class='jumbotron jumbotron-fluid'>
+				<div class='jumbotron jumbotron-fluid p-3'>
 						<div class='container'>
-						  <h1 class='display-4'><center>Your approved projects</center></h1>
+						  <h1 class='display-4'><center>".$user."'s approved projects</center></h1>
 						</div>
 					  </div>";
 				while($row = $result->fetch_assoc()){
@@ -81,13 +88,25 @@
 			else{
 				echo "<h3 class='w3-container'>No Projects submitted by you.</h3>";
 			}
+			?>
+			</div>
+			</div>
+			<div class='row'>
+
+			<?php
+
+			echo "<div class='container-fluid p-3 '>
+				<div class='jumbotron jumbotron-fluid p-3'>
+						<div class='container'>
+						  <h1 class='display-4'><center>Pending Approvals</center></h1>
+						</div>
+					  </div>";
 
 			$sql = "SELECT * FROM approval WHERE user='".$user."';";
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0){
 	              $id=0;
-				echo "<h2 class='w3-container'>Pending Approvals</h2>";
 				while($row = $result->fetch_assoc()){
 					$title = $row["title"];
 					$url = $row["image"];
@@ -109,6 +128,7 @@
 	</script>
 	<!-- Call footer.php for Footer Bar-->
 	<!--Footer to be added-->
+	</div>
 	</div>
 	</div>
 	<?php include "..//common//footer.php"; ?>

@@ -59,8 +59,10 @@
                 <p><h4><?php echo $desc; ?></h4></p>
                 <div class="purchase_wrapper">
                   <center>
-                    <div class="buy_btn"><a href="../../<?php echo "download.php?pid=".$pid."&type=i"?>">Download Now</div>
-                    <div class="buy_btn"><a href="../../<?php echo"download.php?pid=".$pid."&type=s"?>">Download Source</div>
+                    
+                    <a href="../../<?php echo"download.php?pid=".$pid."&type=s"?>"><button type="button" class="btn btn-success btn-lg">Download source</button></a> <br> <br>
+                    <a href="../../<?php echo "download.php?pid=".$pid."&type=i"?>"><button type="button" class="btn btn-success btn-lg">Download Now</button></a>
+
                   </center>
                 </div>
             </div>

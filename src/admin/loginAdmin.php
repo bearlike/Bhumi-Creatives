@@ -75,16 +75,16 @@
 		?>
 		<!-- PHP Close -->
 		<section class="h-100">
-			<div class="container h-100">
+			<div class="container p-3 h-100">
 				<div class="row justify-content-md-center h-100">
 					<div class="card-wrapper">
-						<div class="brand">
-							<img src="../../assets/img/logo.jpg" alt="Bhumi logo">
+						<div class="row justify-content-md-center">
+							<img src="../../assets/img/logo.jpg" alt="Bhumi logo" class="rounded mx-auto d-block" style="width: 20%; height: auto">
 						</div>
 						<div class="card fat">
 							<div class="card-body">
 								<form action="loginAdmin.php" method="POST">
-									<h4 class="card-title">Moderator Login</h2>
+									<center><h4 class="card-title">Moderator Login</h2></center>
 										<div class="form-group">
 											<input class="form-control" type="text" name="user" placeholder="Enter Email" required><br>
 											<input class="form-control" type="Password" name="pass" placeholder="Enter Password" required><br>
@@ -92,7 +92,7 @@
 											<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block">
 										</div>
 										<center>
-											Contact your administartor, if any problem with login exist
+											Contact your Administrator if you face any problems with login.
 										</center>
 								</form>
 							</div>

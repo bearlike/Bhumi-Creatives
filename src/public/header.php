@@ -39,23 +39,23 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       
-      <li class="nav-item ">
+      <li class="nav-item mr-3">
         <a class="nav-link" href="projects.php">Home</a>
       </li>
-      <form class="form-inline my-2 my-lg-0" action='filtered.php' method='post'>
+      <form class="form-inline my-2 mr-3 my-lg-0" action='filtered.php' method='post'>
       <input class="form-control mr-sm-2" type="text" name='filter' placeholder="Filter by tags" aria-label="Search" required>
       <button class="btn btn-outline-success my-2 my-sm-0" value='Filter' type="submit">Search</button>
     </form>
-      <li class="nav-item">
+      <li class="nav-item mr-3">
         <a class="nav-link" href="uploading.php">Upload</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mr-3">
         <a class="nav-link" href="notification.php">Notifications</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mr-3">
         <a class="nav-link" href="myAccount.php">My Account</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mr-3">
         <a class="nav-link" href="../common/logout.php">Logout</a>
       </li>
 

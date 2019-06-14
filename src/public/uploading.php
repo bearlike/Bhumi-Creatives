@@ -152,7 +152,7 @@
 		<!-- jumbotron -->
 
 		<div class='container-fluid p-3 '>
-			<div class="jumbotron jumbotron-fluid">
+			<div class="jumbotron jumbotron-fluid p-2">
 					<div class="container">
 					  <h1 class="display-4"><center>Upload form</center></h1>
 					  <p class="lead"><center>Share your creative content with the whole of Bhumi!</center></p>

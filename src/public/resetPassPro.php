@@ -53,7 +53,25 @@
 		}
 	?>
 	<!-- PHP Close -->
-	<section class="h-100">
+
+	<div class="container-fluid">
+	<div class="row  justify-content-md-center p-5">
+	<div class="col-md-4">
+	<div class="card p-3">
+	<div class="card-body">
+	<form action="loginAdmin.php" method="POST">
+		<center><h3 class="card-title">Reset Password</h3></center>
+		<input class="form-control" type="password" name="pass" placeholder="Enter Password" required/><br>
+		<input class="form-control" type="password" name="conPass" placeholder="Enter New Password Again" required/><br><br>
+		<input type="submit" name="subPass" value="Change Password"class="btn btn-success btn-block" />
+	</form>
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	</div>
+	<!-- <section class="h-100">
 		<div class="container h-100">
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
@@ -68,7 +86,7 @@
 									<input class="form-control" type="password" name="conPass" placeholder="Enter New Password Again" required/><br><br>
 									<input type="submit" name="subPass" value="Change Password"class="btn btn-primary btn-block" />
 								</form>
-	</center>
+	</center> -->
 
 </body>
 </html>

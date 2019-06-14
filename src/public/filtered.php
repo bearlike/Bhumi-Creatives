@@ -10,12 +10,21 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/gen/projects.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/gen/styles.css">
 	<link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/w3.css">
+
 </head>
 
 <body>
 	<?php
 		include 'header.php';
-    include '../common/connection.php';
+		include '../common/connection.php';
+		?>
+	<div class="container-fluid">
+	<div class="row display-4 p-4  justify-content-md-center">
+	- Here is what we found -
+	</div>
+	<div class="row">
+	<?php
 
     $search = strtolower($_POST['filter']);
     $search = str_replace(" ",",",$search);
@@ -26,7 +35,6 @@
 
 		if ($result->num_rows > 0){
 			$id=0;
-			echo "<table><tr>";
 			while($row = $result->fetch_assoc()){
 				$title = $row["title"];
 				$url = $row["image"];
@@ -39,8 +47,11 @@
           {
             if(strpos($tag, $searcharr[$i]) !== false)
             {
-              echo "<div class='w3-btn w3-col m4 l3'><a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' /><br>";
-			        echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div>";
+							echo "<div class='w3-btn w3-col m4 l3'>
+							<div class=' w3-display-container'>
+
+							<a onclick='redir()'><img name='".$title."' class='projectImg rounded w3-hover-opacity' id='".$row['pid']."' src='../../".$url."' alt='Not able to display' />";
+			        echo "<center><b>".ucfirst($title)."<br>Tags:</b> ".$row['tags']."</center></a></div></div>";
               $flag = 1;
               break;
             }
@@ -63,6 +74,7 @@
 	</script>
 	<!-- Call footer.php for Footer Bar-->
 	<!--Footer to be added-->
-
+</div>
+</div>
 </body>
 </html>
