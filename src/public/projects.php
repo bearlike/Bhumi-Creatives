@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="../../lib/font-awesome/4.7.0/css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="../../lib/buttons/material-circle.css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/category-bar.css">
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet"> 
 <style>
@@ -46,6 +47,62 @@
 					  <p class="lead"><center>Pictures, videos, or design files?</center></p>
 					</div>
 				  </div>
+
+
+		<div class="row justify-content-md-center">
+			<div class="card">
+				<div class="card-body ">
+     				 <center>Filter quality downloads for your next project by softwares
+						<div class"row justify-content-md-center"></center>
+						<ul class="tools-navigation-items">
+						<!-- aftereffects Icon-->
+						<li class="tools-nativation-item">
+							<a href="/posts/tool/aftereffects">
+								<img src="../../assets/img/tools/aftereffects.png" class="shadow">
+							</a>
+						</li>
+						<!-- illustrator Icon-->
+						<li class="tools-nativation-item">
+							<a href="/posts/tool/illustrator">
+								<img src="../../assets/img/tools/illustrator.png" class="shadow">
+							</a>
+						</li>
+						<!-- xd Icon-->
+						<li class="tools-nativation-item">
+							<a href="/posts/tool/xd">
+								<img src="../../assets/img/tools/xd.png" class="shadow">
+							</a>
+						</li>
+						<!-- html Icon-->
+						<li class="tools-nativation-item">
+							<a href="/posts/tool/html">
+								<img src="../../assets/img/tools/html.png" class="shadow">
+							</a>
+						</li>
+						<!-- wordpress Icon-->
+						<li class="tools-nativation-item">
+							<a href="/posts/tool/sketch">
+								<img src="../../assets/img/tools/wordpress.png" class="shadow">
+							</a>
+						</li>
+				</ul>
+						</div>
+
+
+    			</div>
+			</div>	
+		</div>
+
+
+	
+
+
+		</div>
+		
+					<div class="container p-4">
+					  <h1 class="display-4"><center>- All projects -</center></h1>
+					</div>
+				  		  
 		<div class="row">
 		<?php
 		include '..//common//connection.php';

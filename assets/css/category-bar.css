@@ -1,0 +1,116 @@
+img {
+  border: 0;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.tools-navigation-items {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.tools-navigation-items li {
+  list-style: none;
+  margin: 0 0px 0 0;
+  padding: 0;
+  float: left;
+}
+
+.tools-navigation-items li.tools-nativation-item-active img {
+  opacity: 0.87;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.tools-navigation-items img {
+  height: 38px;
+  width: 68px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  position: relative;
+  top: 0;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+}
+
+.tools-navigation-items img:hover {
+  -webkit-box-shadow: 0 1px 2px rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+  box-shadow: 0 1px 2px rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+  top: -2px;
+  opacity: 0.87;
+}
+
+.tools-navigation-items li a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+}
+
+.shadow-hover :hover {
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+}
+
+/* Body */
+.posts-group__header-heading-date {
+  float: left;
+}
+
+.posts-group__header h1,
+.posts-group__header h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin-top: 0;
+  color: #2d2d2d;
+  display: inline;
+  font-weight: 500;
+  line-height: 34px;
+  padding-left: 0.2em;
+}
+
+.posts-group__header .date,
+.posts-group__header .note {
+  display: inline-block;
+  color: #a2a4a6;
+  line-height: 18px;
+  margin-left: 10px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.posts-group__header .date {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Zoom In #1 */
+.hover01 figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hover01 figure:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

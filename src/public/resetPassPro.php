@@ -55,6 +55,9 @@
 	<!-- PHP Close -->
 
 	<div class="container-fluid">
+	<div class="row justify-content-md-center p-1">
+		<img src="../../assets/img/logo.jpg" alt="Bhumi logo" class="rounded mx-auto d-block" style="width: 10		%; height: auto">
+	</div>
 	<div class="row  justify-content-md-center p-5">
 	<div class="col-md-4">
 	<div class="card p-3">
